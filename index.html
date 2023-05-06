@@ -9,9 +9,10 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Vidalta Experience | Vacation Homes with Higher Standards</title>
     <!-- 3rd party stylesheets -->
-    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Global stylesheets -->
-    <link href="assets/css/global.css" rel="stylesheet">
+    <link href="assets/css/global-styles.css" rel="stylesheet">
     <!-- Custom stylesheets -->
     <link href="assets/css/custom.css" rel="stylesheet">
   </head>
@@ -20,40 +21,281 @@
 
     <div class="web-app text-center">
 
-      <header class="app-header"> 
-        <div class="container border-bottom py-5">
-          <div class="brand-logo">
-            <img class="img-fluid" src="assets/brand/vidalta-logo_color.svg" alt="Vidalta logo, color">
+      <header class="app-header">
+        <div class="container-fluid d-lg-flex align-items-center">
+
+          <div class="header-brand">
+            <img class="img-fluid w-100" src="assets/brand/vidalta-logo_color.svg" alt="{Brand Name} Logo, color" >
           </div>
+
+          <div class="header-nav navbar navbar-expand-lg ms-auto">
+
+            <nav id="mainNav" class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Our Properties</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- /#mainNav -->
+
+            <nav id="subNav">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-globe me-1"></i>Language</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-regular fa-circle-question me-1"></i>Help</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-regular fa-circle-user me-1"></i>Login</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- /#subNav -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <!-- /.header-nav -->
         </div>
+        <!-- /.container -->
       </header>
       <!-- /.app-header -->
 
-      <main class="app-content my-5">
-        <div class="container bg-body-tertiary p-4">
-          <div class="text-center rounded-3">
-            <img src="assets/brand/vidalta-logo_crest.png" alt="Vidalta logo, crest" class="img-fluid my-3" width="222px">
-            <h1 class="text-body-emphasis">Vacation rentals with higher standards</h1>
-            <p class="col-lg-8 mx-auto fs-5 text-muted">
-              Indulge in the ultimate luxury escape, where every stay is an unforgettable experience – the <b>Vidalta Experience</b>. <i>New reservation platform coming soon</i>. 
-            </p>
-            <div class="d-inline-flex gap-2 mb-3">
-              <a class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" href="https://www.airbnb.com/users/show/71720989">
-                Our properties
-              </a>
-              <a class="btn btn-outline-secondary btn-lg px-4 rounded-pill" href="https://www.airbnb.com/users/show/71720989">
-                About Us
-              </a>
+      <main class="app-content">
+
+        <section id="heroSlider" class="hero-media carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+          </div>
+          <!-- /.carousel-indicators -->
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="assets/img/hero/pexels-chris-rodriguez-2884864.jpeg" alt="{Destination Type} in {Destination Name}">
+              <div class="container">
+                <div class="carousel-caption text-start">
+                  <h1>Example headline.</h1>
+                  <p>Some representative placeholder content for the first slide of the carousel.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- /.carousel-item -->
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/img/hero/pexels-photo-12902831.jpeg" alt="{Destination Type} in {Destination Name}">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Another example headline.</h1>
+                  <p>Some representative placeholder content for the second slide of the carousel.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- /.carousel-item -->
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/img/hero/pexels-suzukii-xingfu-872831.jpeg" alt="{Destination Type} in {Destination Name}">
+              <div class="container">
+                <div class="carousel-caption text-end">
+                  <h1>One more for good measure.</h1>
+                  <p>Some representative placeholder content for the third slide of this carousel.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- /.carousel-item -->
+          </div>
+          <!-- /.carousel-inner -->
+
+          <div class="carousel-arrows">
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- /.carousel-arrows -->
+        </section>
+        <!-- /#heroSlider -->
+
+        <section class="hero-intro">
+          <div class="container text-center py-5">
+            <div class="col-lg-9 mx-auto">
+              <img class="d-block mx-auto mb-2" src="assets/brand/vidalta-logo_crest.png" alt="{Brand Name} Logo, crest" width="150">
+              <h1 class="display-5 fw-bold text-body-emphasis">Vacation rentals with higher standards</h1>
+              <p class="fs-5 text-muted">
+                Indulge in the ultimate luxury escape, where every stay is an unforgettable experience – the <b>Vidalta Experience</b>. <i>New website coming soon!</i> 
+              </p>
+              <div class="cta cta-group d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-primary btn-lg px-5">Our Properties</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-5">Our Standards</button>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+        <!-- /.hero-intro -->
+
+        <section class="icon-group featured">
+          <div class="container py-5">
+            <h2>Why book with Vidalta?</h2>
+            <div class="row justify-content-center">
+              <div class="col-sm-6 col-lg-3">
+                <div class="icon-note xl">
+                  <i class="fa-solid fa-award"></i>
+                  <h4>Service Guarantee</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ex incidunt accusamus minima enim iusto reprehenderit suscipit aut quod ullam quasi nesciunt quae rem, fugiat expedita. Repellat dolorum, beatae. Autem!</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="icon-note xl">
+                  <i class="fa-solid fa-hand-sparkles"></i>
+                  <h4>Spotless Clean</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ex incidunt accusamus minima enim iusto reprehenderit suscipit aut quod ullam quasi nesciunt quae rem, fugiat expedita. Repellat dolorum, beatae. Autem!</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <div class="icon-note xl">
+                  <i class="fa-solid fa-trophy"></i>
+                  <h4>Super Hosts</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ex incidunt accusamus minima enim iusto reprehenderit suscipit aut quod ullam quasi nesciunt quae rem, fugiat expedita. Repellat dolorum, beatae. Autem!</p>
+                </div>
+              </div> 
+            </div>
+          </div>                  
+        </section>
+        <!-- /.icon-group.featured -->
+
+        <section class="card-group featured">
+
+          <div class="container py-5">
+            <h2>Book your hassle-free getaway today!</h2>
+            <div class="row row-cols-sm-2 row-cols-lg-4">
+              <div class="col-auto my-2">
+                <div class="card product-card truncated">
+                  <div class="row">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <img class="img-fluid full-width" src="assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-description">
+                        <h3 class="title">{Product_Title}</h3>
+                        <div class="location">
+                          <span class="text-muted">{Product_Location}</span>
+                        </div>
+                      </div>
+                      <!-- /.card-description -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row -->
+                </div>
+                <!-- /.card-product-card.truncated -->
+              </div>
+              <div class="col-auto my-2">
+                <div class="card product-card truncated">
+                  <div class="row">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <img class="img-fluid full-width" src="assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-description">
+                        <h3 class="title">{Product_Title}</h3>
+                        <div class="location">
+                          <span class="text-muted">{Product_Location}</span>
+                        </div>
+                      </div>
+                      <!-- /.card-description -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row -->
+                </div>
+                <!-- /.card-product-card.truncated -->
+              </div>
+              <div class="col-auto my-2">
+                <div class="card product-card truncated">
+                  <div class="row">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <img class="img-fluid full-width" src="assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-description">
+                        <h3 class="title">{Product_Title}</h3>
+                        <div class="location">
+                          <span class="text-muted">{Product_Location}</span>
+                        </div>
+                      </div>
+                      <!-- /.card-description -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row -->
+                </div>
+                <!-- /.card-product-card.truncated -->
+              </div>
+              <div class="col-auto my-2">
+                <div class="card product-card truncated">
+                  <div class="row">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <img class="img-fluid full-width" src="assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-description">
+                        <h3 class="title">{Product_Title}</h3>
+                        <div class="location">
+                          <span class="text-muted">{Product_Location}</span>
+                        </div>
+                      </div>
+                      <!-- /.card-description -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row -->
+                </div>
+                <!-- /.card-product-card.truncated -->
+              </div>
+            </div>
+          </div>
+
+
+        </section>
+
       </main>
       <!-- /.app-content -->
 
       <footer class="app-footer">
         <div class="container border-top">
           <div class="brand-logo py-4">
-            <img class=" img-fluid" src="assets/brand/vidalta-logo_black.png" alt="Vidalta logo, black">
+            <img class="img-fluid" src="assets/brand/vidalta-logo_black.png" alt="Vidalta logo, black">
           </div>
           
           <div class="border-top py-2">
@@ -66,6 +308,7 @@
 
     </div>
     <!-- /.web-app -->
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>

@@ -15,10 +15,27 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <!-- Global stylesheets -->
-    <link href="assets/css/global-styles.css" rel="stylesheet">
+    <link href="../assets/css/global-styles.css" rel="stylesheet">
     <!-- Custom stylesheets -->
-    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
   </head>
+
+  <style>
+    .btn-primary {
+      background-color: #00add9 !important;
+      border-color: #00add9;
+    }
+    a:not(.btn):hover, a.link-light:hover {
+      color: #00add9 !important;
+    }
+    .text-bg-secondary {
+      background-color: #a6805a !important;
+      color: #ffffff !important;
+    }
+    .color-accent {
+      color: #a6805a;
+    }
+  </style>
 
   <body>
 
@@ -28,7 +45,7 @@
         <div class="header-wrapper">
           <div class="header-navigation navbar navbar-expand-lg">
             <div class="header-brand col">
-              <img class="img-fluid w-100" src="assets/brand/vidalta-logo_color.svg" alt="{Brand Name} Logo, color" >
+              <img class="img-fluid w-100" src="../assets/brand/vidalta-logo_color.svg" alt="{Brand Name} Logo, color" >
             </div>
             <nav id="headerSubNav" class="col order-lg-last">
               <ul class="nav justify-content-end">
@@ -72,7 +89,7 @@
 
         <section class="hero-media">
           <div class="media-inner">
-            <img class="hero-image" src="assets/img/hero/pexels-photo-12902831.jpeg" alt="{Destination Type} in {Destination Name}">
+            <img class="hero-image" src="../assets/img/hero/pexels-photo-12902831.jpeg" alt="{Destination Type} in {Destination Name}">
             <div class="hero-overlay">
               <div class="container-lg">
                 <div class="hero-text">
@@ -139,7 +156,7 @@
           <div class="container">
             <p>What our guests are saying:</p>
             <h2 class="mb-4">"We had an absolutely wonderful stay!"</h2>
-            <a href="" class="btn btn-lg btn btn-outline-secondary">See Reviews</a>
+            <a href="" class="btn btn-lg btn btn-primary">See Reviews</a>
           </div>
         </div>
 
@@ -154,7 +171,7 @@
                   <div class="row">
                     <div class="card-image cropped-img">
                       <div class="img-wrapper">
-                        <img class="img-fluid full-width" src="assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
+                        <img class="img-fluid full-width" src="../assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
                       </div>
                     </div>
                     <!-- /.card-image -->
@@ -178,7 +195,7 @@
                   <div class="row">
                     <div class="card-image cropped-img">
                       <div class="img-wrapper">
-                        <img class="img-fluid full-width" src="assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
+                        <img class="img-fluid full-width" src="../assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
                       </div>
                     </div>
                     <!-- /.card-image -->
@@ -202,7 +219,7 @@
                   <div class="row">
                     <div class="card-image cropped-img">
                       <div class="img-wrapper">
-                        <img class="img-fluid full-width" src="assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
+                        <img class="img-fluid full-width" src="../assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
                       </div>
                     </div>
                     <!-- /.card-image -->
@@ -226,7 +243,7 @@
                   <div class="row">
                     <div class="card-image cropped-img">
                       <div class="img-wrapper">
-                        <img class="img-fluid full-width" src="assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
+                        <img class="img-fluid full-width" src="../assets/img/product/pexels-ameruverse-digital-marketing-media-2294125.jpeg" alt="{Product_Name}">
                       </div>
                     </div>
                     <!-- /.card-image -->
@@ -258,23 +275,23 @@
           <div class="row text-start">
             <div class="col-auto me-auto">
               <div class="footer-brand border-bottom pb-4 mb-4">
-                <img class="img-fluid w-100" src="assets/brand/vidalta-logo_white.png" alt="{Brand Name} Logo, color" >
+                <img class="img-fluid w-100" src="../assets/brand/vidalta-logo_white.png" alt="{Brand Name} Logo, color" >
               </div>
               <!-- /.footer-brand -->
               <div class="footer-social mb-4">
                 <h4>Social</h4>
                 <ul class="nav">
                   <li class="icon-link social">
-                    <a class="facebook" href="" target="_blank"><i class="color-accent fab fa-facebook-f"></i></a>
+                    <a class="facebook" href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
                   </li>
                   <li class="icon-link social">
-                    <a class="instagram" href="" target="_blank"><i class="color-accent fab fa-instagram"></i></a>
+                    <a class="instagram" href="" target="_blank"><i class="fab fa-instagram"></i></a>
                   </li>
                   <li class="icon-link social">
-                    <a class="linkedin" href="" target="_blank"><i class="color-accent fab fa-linkedin-in"></i></a>
+                    <a class="linkedin" href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                   </li>
                   <li class="icon-link social">
-                    <a class="youtube" href="https://www.youtube.com/user/hyatt" target="_blank"><i class="color-accent fab fa-youtube"></i></a>
+                    <a class="youtube" href="https://www.youtube.com/user/hyatt" target="_blank"><i class="fab fa-youtube"></i></a>
                   </li>
                 </ul>
               </div>
@@ -298,16 +315,16 @@
                     <h4>Company</h4>
                     <ul class="nav flex-column">
                       <li>
-                        <a href="">About Us</a>
+                        <a class="link-light" href="">About Us</a>
                       </li>
                       <li>
-                        <a href="">News</a>
+                        <a class="link-light" href="">News</a>
                       </li>
                       <li>
-                        <a href="">Reviews</a>
+                        <a class="link-light" href="">Reviews</a>
                       </li>
                       <li>
-                        <a href="">Partnerships</a>
+                        <a class="link-light" href="">Partnerships</a>
                       </li>
                     </ul>
                   </div>
@@ -315,16 +332,16 @@
                     <h4>Travel</h4>
                     <ul class="nav flex-column">
                       <li>
-                        <a href="">Travel Guide</a>
+                        <a class="link-light" href="">Travel Guide</a>
                       </li>
                       <li>
-                        <a href="">Travel Checklist</a>
+                        <a class="link-light" href="">Travel Checklist</a>
                       </li>
                       <li>
-                        <a href="">Properties in Florida</a>
+                        <a class="link-light" href="">Properties in Florida</a>
                       </li>
                       <li>
-                        <a href="">Properties in Colombia</a>
+                        <a class="link-light" href="">Properties in Colombia</a>
                       </li>
                     </ul>
                   </div>
@@ -332,13 +349,13 @@
                     <h4>Contact</h4>
                     <ul class="nav flex-column">
                       <li>
-                        <a href="">FAQs</a>
+                        <a class="link-light" href="">FAQs</a>
                       </li>
                       <li>
-                        <a href="">Cancellation Policy</a>
+                        <a class="link-light" href="">Cancellation Policy</a>
                       </li>
                       <li>
-                        <a href="">Get in Touch</a>
+                        <a class="link-light" href="">Get in Touch</a>
                       </li>
                     </ul>
                   </div>
@@ -354,7 +371,7 @@
 
         <div class="footer-copyright">
           <div class="container text-center py-3">
-            <p class="mb-0">© Copyright Vidalta 2023. All Rights Reserved. <span class="mx-2">|</span><a href="">Sitemap</a> <span class="mx-2">|</span> <a href="">Privacy</a><a href="">Terms</a></p> 
+            <p class="mb-0">© Copyright Vidalta 2023. All Rights Reserved. <span class="mx-2">|</span><a class="link-light" href="">Sitemap</a> <span class="mx-2">|</span> <a class="link-light" href="">Privacy</a> <span class="mx-2">|</span> <a class="link-light" href="">Terms</a></p> 
           </div>
         </div>
         <!-- /.footer-copyright -->

@@ -23,18 +23,43 @@
 
   <style>
     .btn-primary {
+      /* Cyan (Process) */
       background-color: #00add9 !important;
-      border-color: #00add9;
+      border-color: #fff;
+      color: #fff;
     }
-    a:not(.btn):hover, a.link-light:hover {
-      color: #00add9 !important;
+    .btn-secondary {
+      /* Café Au Lait */
+      background-color: #a6805a; !important;
+      color: #fff !important;
+      border-color: #fff !important;
+    }
+    .color-accent {
+      /* Caribbean Green */
+      color: #06BF9D;
+    }
+    a:hover, a.link-light:hover {
+      color: #007998 !important;
+    }
+    .btn-primary:hover {
+      background-color: #007998 !important;
+      color: #fff !important;
+    }
+    .btn-secondary:hover {
+      background-color: #91704E !important;
+      color: #fff !important;
     }
     .text-bg-secondary {
       background-color: #a6805a !important;
-      color: #ffffff !important;
+      color: #fff !important;
     }
-    .color-accent {
-      color: #a6805a;
+    .text-bg-dark {
+      /* Dark Charcoal */
+      background-color: #2f2f2f !important;
+    }
+    .text-bg-light {
+      /* Anti-Flash White */
+      background-color: #f2f2f2 !important;
     }
   </style>
 
@@ -102,7 +127,7 @@
                 <div class="hero-cta">
                   <div class="input-group">
                     <input type="text" class="form-control form-control-lg" placeholder="Enter your e-mail" aria-label="Recipient's email" aria-describedby="newsletterSignup">
-                    <button class="btn btn-lg btn-primary" type="button" id="newsletterSignup">Sign up</button>
+                    <button class="btn btn-lg btn-primary px-4" type="button" id="newsletterSignup">Sign up</button>
                   </div>
                 </div>
                 <!-- /.hero-cta -->
@@ -218,6 +243,11 @@
                 <!-- /.card-product-card.truncated -->
               </div>
             </div>
+            <div class="row">
+              <div class="col-auto mx-auto">
+                <a class="btn btn-lg btn-primary px-4 mt-3">Our Standards</a>
+              </div>
+            </div>
           </div>
         </section>
         <!-- /.card-group.featured -->
@@ -266,7 +296,7 @@
           <div class="container">
             <p>What our guests are saying:</p>
             <h2 class="mb-4">"We had an absolutely wonderful stay!"</h2>
-            <a href="" class="btn btn-lg btn btn-primary">Book now via Airbnb</a>
+            <a href="" class="btn btn-lg btn btn-secondary px-4">Book now via Airbnb</a>
           </div>
         </div>
 

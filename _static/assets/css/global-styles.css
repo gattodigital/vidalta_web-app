@@ -9,20 +9,20 @@ Version: 1.0
 
 /* COLOR PALETTE 
 ----------------
-.bg-brand      { #a6805a } : cafe au lait
-.bg-accent     { #977547 } : medal bronze
-.bg-light      { #f0f3f5 } : anti-flash white
-.bg-neutral    { #616469 } : comfort graphite
-.bg-dark       { #212529 } : dark gunmetal
-.txt-brand     { #a6805a } : cafe au lait    
-.txt-accent    { #977547 } : medal bronze
-.txt-light     { #f0f3f5 } : anti-flash white
-.txt-neutral   { #616469 } : comfort graphite
-.txt-dark      { #35373b } : onyx
-.border-light  { #dee2e6 } : platinum
-.btn-primary {}
-.btn-secondary {}
-.btn-neutral {}
+body				{ #35373b } : onyx
+
+.xyz-primary      	{ #a6805a } : cafe au lait
+ :hover / accent  	{ #977547 } : medal bronze
+.xyz-secondary 		{ #006b8f } : sea blue
+ :hover	/ accent	{ #0099cc } : rich electric blue
+.xyz-accent			{  }
+
+.bg/txt-light		{ #f0f3f5 } : anti-flash white
+.bg/txt-neutral		{ #6c757d } : auro-metal-saurus
+.bg/txt-dark		{ #212529 } : dark gunmetal
+
+.border-xy-light    { #dee2e6 } : platinum
+.border-xy-dark		{ #616469 } : comfort graphite
 ----------------
 */
 
@@ -36,7 +36,7 @@ html {
 body {
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 400;
-	color: #000000;
+	color: #35373b;
 	background-color: #ffffff;
 	margin: 0 auto;
 	display: flex;
@@ -59,53 +59,60 @@ main.app-content {
 	min-height: 50%;
 }
 
-/* Background */
-.bg-brand {
-	background-color: #a6805a !important;
+/* Colors & Backgrounds */
+.color-white {
+	color: #ffffff;
 }
 
-.bg-accent {
-	background-color: #977547 !important;
+.color-light {
+	color: #f0f3f5;
 }
 
-.bg-dark {
-	background-color: #212529 !important;
+.color-neutral {
+	color: #666666;
+}
+
+.color-dark {
+	color: #35373b;
+}
+
+.color-primary {
+	color: #a6805a;
+}
+
+.color-secondary {
+	color:#006B8F;
+}
+
+.color-accent {
+	color: #977547;
 }
 
 .bg-light {
 	background-color: #f0f3f5 !important;
+
 }
 
 .bg-neutral {
-	background-color: #616469 !important;
+	background-color: #6c757d !important;
 	color: #ffffff;
 }
 
-.text-bg-dark {
-	background-color: #35373b !important;
-}
-
-/* Typography */
-.txt-brand {
-	color: #a6805a;
-}
-
-.txt-light {
+.bg-dark {
+	background-color: #212529 !important;
 	color: #f0f3f5;
 }
 
-.txt-accent {
-	color: #977547;
+.bg-primary {
+	background-color: #a6805a !important;
 }
 
-.txt-neutral {
-	color: #666666
+.bg-secondary {
+	background-color: #006b8f !important;
+	color: #ffffff
 }
 
-.txt-dark {
-	color: #35373b
-}
-
+/* Typography */
 h1,
 h2,
 .h1,
@@ -115,6 +122,12 @@ h2,
 }
 
 /* Imagery */
+.media-cropped {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
 .media-cropped,
 .cropped-media-wrapper {
 	display: flex !important;
@@ -148,16 +161,16 @@ h2,
 	font-weight: 700;
 }
 
-.btn.btn-secondary {
-	background-color: #ffffff !important;
-	color: #a6805a !important;
-	border-color: #a6805a !important;
-}
-
 .btn.btn-primary:hover {
 	background-color: #977547 !important;
 	border-color: #00add9;
 	color: #fff !important;
+}
+
+.btn.btn-secondary {
+	background-color: #ffffff !important;
+	color: #a6805a !important;
+	border-color: #a6805a !important;
 }
 
 .btn.btn-secondary:hover {
@@ -173,7 +186,6 @@ a.link-light:hover {
 }
 
 /* Newsletter */
-
 .newsletters-subscribe-form {
 	position: relative;
 	display: flex;
@@ -237,14 +249,12 @@ a.link-light:hover {
 }
 
 @media (max-width: 767.98px) {
-
 	.newsletters-form-wrapper .row,
 	.newsletters-form-wrapper .col-md-12 {
 		all: unset;
 		width: 100%;
 	}
 }
-
 
 /* Icons */
 .icon-note.xl i {
@@ -293,6 +303,7 @@ a.link-light:hover {
 	padding: .5rem;
 	border-color: rgba(166, 128, 90, 0.25);
 	color: rgba(166, 128, 90, 0.25);
+	margin-left: 1rem;
 }
 
 .navbar-toggler:focus {
@@ -329,16 +340,21 @@ a.link-light:hover {
 	transition: ease all .3s;
 }
 
+#headerSubNav {
+	max-width: fit-content;
+	margin-left: 1rem;
+}
+
 #headerMainNav {
 	justify-content: end;
 }
 
-@media (max-width:767.98px) {
+@media (max-width: 991.98px) {
 	.app-header .header-brand img {
 		max-width: 177px;
 	}
 
-	.app-header a.nav-link {
+	#headerMainNav a.nav-link {
 		border-top: 1px solid rgba(166, 128, 90, 0.25);
 		padding: 0.75rem;
 	}
@@ -372,10 +388,9 @@ a.link-light:hover {
 	overflow: hidden;
 }
 
-.hero-media .cropped-media-wrapper {
+.hero-media .cropped-media-wrapper.lg {
 	min-height: calc(100vh - 560px);
 	max-height: 50vh;
-	min-width: 100%;
 }
 
 .hero-media .hero-image {

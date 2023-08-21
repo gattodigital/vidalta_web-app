@@ -388,9 +388,14 @@ a.link-light:hover {
 	overflow: hidden;
 }
 
-.hero-media .cropped-media-wrapper.lg {
+.hero-media.lg .cropped-media-wrapper {
 	min-height: calc(100vh - 560px);
 	max-height: 50vh;
+}
+
+.hero-media.sm .cropped-media-wrapper {
+	min-height: calc(100vh - 860px);
+	max-height: 30vh;
 }
 
 .hero-media .hero-image {

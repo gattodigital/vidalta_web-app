@@ -31,7 +31,7 @@ function determineTemplate() {
     } else if (window.location.hash === '#terms-and-conditions') {
         templateName = 'terms-and-conditions';
     } else if (window.location.hash === '#design-system') {
-        templateName = 'design-system';
+        return loadContent('app-content', 'design-system');
     }
 
     loadContent('app-content', `templates/${templateName}.html`);

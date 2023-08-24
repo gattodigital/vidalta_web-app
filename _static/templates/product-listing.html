@@ -1,54 +1,128 @@
-<div class="container py-5">
-	<h1>Product Listing loaded!</h1>
+<section class="hero-spotlight hero-spotlight_small">
+	<div class="hero-image img-cropped">
+		<div class="cropped-img-wrapper">
+			<img src="assets/img/hero/pexels-chris-rodriguez-2884864.jpeg" alt="{Destination Type} in {Destination Name}">
+		</div>
+	</div>
+	<!-- /.hero-image -->
+	<div class="hero-overlay">
+		<div class="container-lg">
+			<div class="hero-text">
+				<h1 class="mb-3">Search Vidalta Properties</h1>
+			</div>
+			<!-- /.hero-text -->
+			<div class="hero-cta hero-cta_search-bar">
+				<div class="search-bar">
+					<form id="listing_search">
+						<div class="row g-3">
+							<div class="col-lg-3 col-md-4 col-12">
+								<div class="select-wrapper">
+									<select id="select_destination" class="form-select">
+										<option selected="">Destination</option>
+										<option>St. Petersburg, Florida</option>
+										<option>Option 2</option>
+										<option>Option 3</option>
+										<option>Option 4</option>
+										<option>Option 5</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-4 col-12">
+								<div class="input-group">
+									<input type="text" class="form-control" id="startDate" placeholder="Check-in" autocomplete="off">
+									<input type="text" class="form-control" id="endDate" placeholder="Check-out" autocomplete="off">
+									<span class="input-group-text">#</span>
+								</div>
+							</div>
+							<div class="col-md-auto col-12">
+									<a href="" class="btn btn-secondary w-100">Search</a>
+							</div>
+						</div>
+						<!-- /.form-row -->
+					</form>
+					<!-- /#listing_search -->
+				</div>
+			</div>
+			<!-- /.hero-cta_search -->
+		</div>
+		<!-- /.container-lg -->
+	</div>
+	<!-- /.hero-overlay -->
+</section>
+<!-- /.hero-spotlight-->
+
+<div class="container py-4">
+
+
+	<h2 class="border-bottom pb-2 mb-4">(4) Vacation homes in {Location}</h2>
 	<!-- ***** -->
-	<div class="product-card detail">
-		<div class="row px-1">
-			<div class="card-image cropped-img">
-				<div class="img-wrapper" style="min-height: 150px; max-height: 150px;">
+	<div class="product-card">
+		<div class="row g-0">
+			<div class="product-card_image cropped-img">
+				<div class="img-wrapper">
 					<a href="" class="fresco">
-					<img class="media-object" src="assets/img/product/cabin-in-mountains_rionegro.jpeg">
+					<img class="img-object" src="assets/img/product/cabin-in-mountains_rionegro.jpeg">
 					</a>
 				</div>
-				<!-- /.img-wrapper -->
 			</div>
-			<!-- /.card-image -->
-			<div class="card-data">
+			<!-- /.product-card_image -->
+			<div class="product-card_data">
 				<div class="card-description">
-					<h3 class="title">Beautiful Cabin in Mountains</h3>
-					<div class="sm-separator"></div>
-					<div class="description-preview truncated">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos officia exercitationem nemo cupiditate, delectus optio qui nostrum harum similique a consectetur illum pariatur distinctio soluta necessitatibus quaerat ut laboriosam.
-						<span class="view-more"><a>Read More</a></span>
+					<h3 class="product-title">Beautiful Cabin in Mountains</h3>
+					<div class="product-location mb-2">
+						<div class="icon-note icon-note_inline">
+							<i class="material-symbols-outlined">location_on</i>
+							Rionegro, Antioquia
+						</div>
+						
+					</div>					
+					<div class="product-description_preview">
+						Beautiful Bungalow in the mountains of Rionegro with breathtaking views, authentic ranch character, attention to details and comfort truly offer an authentic experience. Disconnect from the city and get away. Medellin 45min, JMC International Airport & Llano Grande 20min, Guatapé/El Peñol 1 hour and much more.
 					</div>
-					<div class="extra-details">
+					<div class="product-details">
 						<div class="icon-note">
-							<i class="fa fa-users"></i>
+							
+							<i class="material-symbols-outlined">people_alt</i>
 							<span>4 guests </span>
 						</div>
 						<div class="icon-note">
-							<i class="fa fa-bed"></i>
+							<i class="material-symbols-outlined">bed</i>
 							<span>3 beds</span>
+						</div>
+						<div class="icon-note">
+							<i class="material-symbols-outlined">bathtub</i>
+							<span>1 bathroom</span>
 						</div>
 					</div>
 				</div>
 				<!-- /.card-description -->
-				<div class="card-pricing">
-					<div class="pricing-monetary">
-						<div class="discount-price">
-							<span class="currency-symbol">$</span>97.00
-						</div>
-						<div class="pricing-support-text">&nbsp; (USD)</div>
+				<div class="card-action">
+					<div class="product-price h4">
+						<span class="price_currency">$</span>
+						97.00
+						<span class="price_support">&nbsp; (USD)</span>
 					</div>
-					<!-- /.pricing-monetary -->
-					<div class="card-cta">
+					<!-- /.product-price -->
+					<div class="product-rating mb-sm">
+						<div class="rating-stars">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+					</div>
+					<!-- /.product-rating -->
+					<div class="product-cta">
 						<a class="btn btn-primary w-100" href="#product-detail" >Book Now</a>
 					</div>
-					<!-- /.card-cta -->
+					<!-- /.product-cta -->
 				</div>
-				<!-- /.card-pricing -->
+				<!-- /.card-action -->
 			</div>
 			<!-- /.card-data -->
 		</div>
-		<!-- /.row.px-1 -->
+		<!-- /.row.g-0 -->
 	</div>
 </div>
+

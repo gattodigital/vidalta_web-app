@@ -4,10 +4,26 @@ async function loadContent(targetClass, contentPath) {
         .then(data => {
             const elements = document.querySelectorAll('.' + targetClass);
             elements.forEach(element => {
-                element.innerHTML = data;  // Use innerHTML here
+                element.innerHTML = data;
+                
+                // Check if the content has the datepicker elements
+                const startDateElement = element.querySelector('#startDate');
+                const endDateElement = element.querySelector('#endDate');
+
+                if (startDateElement && endDateElement) {
+                    new Litepicker({
+                        element: startDateElement,
+                        elementEnd: endDateElement,
+                        singleMode: false, // Set this to false for range mode
+                        format: 'MM-DD-YYYY' // Desired format, can be adjusted
+                    });
+                }
             });
         });
 }
+
+
+
 
 function determineTemplate() {
     let templateName = 'home'; // default to home

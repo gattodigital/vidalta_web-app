@@ -115,41 +115,49 @@ main.app-content {
 h1,
 h2,
 .h1,
-.h2 {
+.h2,
+h3,
+.h3 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 500;
+	color: #000000;
+}
+
+h3, .h3 {
+	font-size: 1.5rem;
 }
 
 /* Imagery */
-.media-cropped {
+.cropped-img,
+.cropped-img .img-wrapper {
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
 	position: relative;
-	width: 100%;
 	overflow: hidden;
 }
 
-.media-cropped,
-.cropped-img-wrapper {
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	position: relative !important;
-	overflow: hidden !important;
-}
-
-.cropped-img-wrapper {
+.cropped-img .img-wrapper {
 	min-width: 100%;
 	min-height: 100%;
 }
 
-.cropped-img-wrapper img {
-	display: block !important;
-	width: 100% !important;
-	max-width: initial !important;
-	height: 100% !important;
-	max-height: unset !important;
-	object-fit: cover !important;
-	min-width: 100% !important;
-	transition: all 0.3s !important;
+.cropped-img .img-wrapper.squared {
+	aspect-ratio: 1 / 1;
+}
+
+.cropped-img .img-wrapper img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	max-width: initial;
+	height: 100%;
+	max-height: unset;
+	object-fit: cover;
+	min-width: 100%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 /* Buttons */
@@ -260,14 +268,24 @@ a.link-light:hover {
 /* Icons */
 .icon-note, .icon-link {
 	display: flex;
+	font-weight: 600;
+	margin-right: 1rem;
 }
 
-.icon-note_inline {
+.icon-note_inline,
+.icon-link_inline {
 	flex-direction: row;
 }
 
-.icon-note_block {
+.icon-note_block,
+.icon-link_block {
 	flex-direction: column;
+}
+
+.icon-note i {
+	color: #6c757d;
+	margin-right: .25rem;
+	font-size: 1.5rem;
 }
 
 .icon-note.xl i {
@@ -390,17 +408,17 @@ a.link-light:hover {
 	padding: 0 8px !important;
 }
 
-/* Hero media */
+/* Hero Spotlights */
 .hero-spotlight {
 	position: relative;
 }
 
-.hero-spotlight_large .cropped-img-wrapper {
+.hero-spotlight_large .img-wrapper {
 	min-height: calc(100vh - 560px);
 	max-height: 50vh;
 }
 
-.hero-spotlight_small .cropped-img-wrapper {
+.hero-spotlight_small .img-wrapper {
 	min-height: calc(100vh - 860px);
 	max-height: 30vh;
 }
@@ -441,7 +459,7 @@ a.link-light:hover {
 		padding: 2rem 0;
 	}
 
-	.hero-spotlight .hero-text {
+	.hero-spotlight .hero-text * {
 		color: #ffffff;
 	}
 }

@@ -268,13 +268,9 @@ a.link-light:hover {
 /* Icons */
 .icon-note, .icon-link {
 	display: flex;
-	font-weight: 600;
 	margin-right: 1rem;
-}
-
-.icon-note_inline,
-.icon-link_inline {
 	flex-direction: row;
+	align-items: center;
 }
 
 .icon-note_block,
@@ -288,8 +284,17 @@ a.link-light:hover {
 	font-size: 1.5rem;
 }
 
+.icon-note_sm {
+	font-size: 0.875rem;
+}
+
+.icon-note_sm i {
+	font-size: 1.25rem;
+}
+
 .icon-note.xl i {
 	font-size: 3.5rem;
+	color: #977547;
 }
 
 .icon-link.social {

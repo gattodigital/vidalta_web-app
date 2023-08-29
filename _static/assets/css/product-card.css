@@ -13,7 +13,6 @@
 }
 
 .product-card>.row {
-	height: 100%;
 	background-color: #ffffff;
 }
 
@@ -24,7 +23,6 @@
 .product-card .card-data {
 	padding: 1rem;
 	font-size: 0.875rem;
-	height: 100%;
 }
 
 .product-card .product-title,
@@ -84,7 +82,7 @@
 
 /* product-card_spotlight styles */
 .product-card_spotlight .card-data {
-	padding: 0.5rem;
+	padding: 1rem 0.5rem;
 }
 
 .product-card_spotlight h3.product-title {

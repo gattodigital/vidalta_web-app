@@ -1,3 +1,4 @@
+// Load content & plugins
 async function loadContent(targetClass, contentPath) {
   fetch(contentPath)
     .then(response => response.text())
@@ -18,11 +19,21 @@ async function loadContent(targetClass, contentPath) {
             format: 'MM-DD-YYYY' // Desired format, can be adjusted
           });
         }
+
+        // Add this right after injecting the new content
+        smartTruncate('.smart-truncate', 3);
       });
     });
 }
 
+// Load header and footer
+loadContent('app-header', 'components/header/app-header.html');
+loadContent('app-footer', 'components/footer/app-footer.html');
 
+// Initial content load
+determineTemplate();
+
+// Load template
 function determineTemplate() {
   let templateName = 'home'; // default to home
 
@@ -47,16 +58,9 @@ function determineTemplate() {
   } else if (window.location.hash === '#design-system') {
     return loadContent('app-content', 'design-system');
   }
-
   loadContent('app-content', `templates/${templateName}.html`);
 }
 
-// Load header and footer
-loadContent('app-header', 'components/header/app-header.html');
-loadContent('app-footer', 'components/footer/app-footer.html');
-
-// Initial content load
-determineTemplate();
-
 // Add an event listener to handle URL hash changes
 window.addEventListener('hashchange', determineTemplate);
+

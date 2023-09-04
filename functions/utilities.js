@@ -2,9 +2,6 @@
 JS code for library functions
 -------------------------- */
 
-// let startX;
-// let endX;
-
 /* LIGHTBOX GALLERIES */
 function openLightbox(imgElement) {
 	var images = document.querySelectorAll('.thumbnail-gallery img');

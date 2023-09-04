@@ -504,12 +504,12 @@ a.link-light:hover {
 	text-align: left;
 }
 
-.hero-spotlight .newsletter-cta {
+.hero-spotlight .hero-cta_newsletter {
 	max-width: 500px;
 	margin: 0 auto .75rem;
 }
 
-.hero-spotlight_gallery .hero-spotlight_cta {
+.hero-spotlight_gallery .hero-cta {
 	position: absolute;
 	bottom: 1.5rem;
 	right: 0;
@@ -658,12 +658,12 @@ a.link-light:hover {
 	transition: max-height 0.30s ease-in-out;
 }
 
-.truncate-4-lines {
-	max-height: calc(var(--line-height) * 4);
+.truncate-3-lines {
+	max-height: calc(var(--line-height) * 3);
 }
 
-.truncate-8-lines {
-	max-height: calc(var(--line-height) * 8);
+.truncate-6-lines {
+	max-height: calc(var(--line-height) * 6);
 }
 
 .truncate-12-lines {

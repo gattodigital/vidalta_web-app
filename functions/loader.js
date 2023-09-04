@@ -8,15 +8,13 @@ async function loadContent(targetClass, contentPath) {
         element.innerHTML = data;
 
         // Check if the content has the datepicker elements
-        const startDateElement = element.querySelector('#startDate');
-        const endDateElement = element.querySelector('#endDate');
+        const dateRangeElement = element.querySelector('#dateRange');
 
-        if (startDateElement && endDateElement) {
+        if (dateRangeElement) {
           new Litepicker({
-            element: startDateElement,
-            elementEnd: endDateElement,
-            singleMode: false, // Set this to false for range mode
-            format: 'MM-DD-YYYY' // Desired format, can be adjusted
+            element: dateRangeElement,
+            singleMode: false, // Keep this as false to allow range mode
+            format: 'MM/DD/YYYY' // Your desired format
           });
         }
 
@@ -39,9 +37,9 @@ function determineTemplate() {
 
   if (window.location.hash === '#product-listing') {
     templateName = 'product-listing';
-  }	else if (window.location.hash === '#product-detail') {
+  } else if (window.location.hash === '#product-detail') {
     templateName = 'product-detail';
-	} else if (window.location.hash === '#about-us') {
+  } else if (window.location.hash === '#about-us') {
     templateName = 'about';
   } else if (window.location.hash === '#faqs') {
     templateName = 'faqs';

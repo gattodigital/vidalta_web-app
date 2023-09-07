@@ -1,5 +1,0 @@
-jQuery(function($) {
-
-    // Some function...
-
-  });

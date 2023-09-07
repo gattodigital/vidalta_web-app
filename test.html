@@ -1,59 +1,3054 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta name="robots" content="noindex">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Gatto Digital | Front End Architect">
-    <meta name="generator" content="Hugo 0.84.0">
+    <meta name="robots" content="noindex" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Gatto Digital | Front End Architect" />
+    <meta name="generator" content="Hugo 0.84.0" />
     <title>Vidalta Experience | Vacation Homes with Higher Standards</title>
     <!-- 3rd party stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+      integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <!-- Global styles -->
-    <link href="assets/css/global-styles.css" rel="stylesheet">
+    <link href="assets/css/global-styles.css" rel="stylesheet" />
     <!-- Component styles -->
-    <link href="assets/css/product-card.css" rel="stylesheet">
+    <link href="assets/css/product-card.css" rel="stylesheet" />
   </head>
 
   <body>
-
     <div class="web-app">
-
       <header class="app-header bg-dark">
-        <!-- file: layouts/header/app-header.html -->
+        <div class="header-content container-xxl py-1">
+          <div class="header-navigation navbar navbar-expand-lg">
+            <div class="header-brand col py-3">
+              <a href="#home">
+                <img
+                  class="img-fluid w-100"
+                  src="assets/brand/vidalta-logo_color.svg"
+                  alt="{Brand Name} Logo, color"
+                />
+              </a>
+            </div>
+            <nav id="headerSubNav" class="col order-lg-last">
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#"
+                    ><i class=" fa-solid fa-globe me-1"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#"
+                    ><i class=" fa-regular fa-circle-question me-1"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#"
+                    ><i class=" fa-regular fa-circle-user me-1"></i
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+            <!-- /#headerSubNav -->
+            <button
+              class="navbar-toggler collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#headerMainNav"
+              aria-controls="mainNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar top-bar"></span>
+              <span class="icon-bar middle-bar"></span>
+              <span class="icon-bar bottom-bar"></span>
+              <span class="sr-only">Toggle navigation</span>
+            </button>
+            <nav id="headerMainNav" class="collapse navbar-collapse col">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#product-listing"
+                    >Our Properties</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#travel-guide"
+                    >Travel Guide</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <!-- /#mainNav -->
+          </div>
+          <!-- /.header-navigation -->
+        </div>
+        <!-- /.header-content -->
       </header>
-      
+
       <main class="app-content">
+        <section class="hero-spotlight hero-spotlight_lg">
+          <div class="hero-image cropped-img">
+            <div class="img-wrapper">
+              <img
+                src="assets/img/hero/pexels-photo-12902831.jpeg"
+                class="img-object"
+                alt="{Image description}"
+              />
+            </div>
+          </div>
+          <!-- /.hero-image -->
+          <div class="hero-overlay">
+            <div class="container-lg">
+              <div class="hero-text">
+                <h1 class="mb-3">
+                  Experience a Higher Standard in Vacation Homes
+                </h1>
+              </div>
+              <!-- /.hero-text -->
+              <div class="hero-cta hero-cta_newsletter">
+                <form id="newsletterSignup" action="">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      aria-label="Recipient's email"
+                      aria-describedby="newsletterSignup"
+                      placeholder="Enter your e-mail for updates"
+                    />
+                    <button
+                      type="button"
+                      id="newsletterSignup"
+                      class="btn btn-lg btn-primary px-4"
+                    >
+                      Sign up
+                    </button>
+                  </div>
+                  <!-- /.input-group -->
+                </form>
+              </div>
+              <!-- hero-cta_newsletter -->
+            </div>
+            <!-- /.container-lg -->
+          </div>
+          <!-- /.hero-overlay -->
+        </section>
+        <!-- /.hero-spotlight_lg -->
 
-        <div class="container">
-          <h1 class="display-1 mb-5">UsE FoR TesTiNg ;-}</h1>
+        <section class="feature-section highlight-products">
+          <div class="container text-center py-5">
+            <div class="section-header">
+              <h2>Disconnect. Enjoy complete peace of mind.</h2>
+              <p class="header-support color-neutral">
+                Our exclusive homes are equipped for a hassle-free vacation
+                experience.
+              </p>
+            </div>
+            <!-- /.section-header -->
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="product-card product-card_grid">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <img
+                          src="assets/img/product/cabin-in-mountains_rionegro.jpeg"
+                          class="img-object"
+                          alt="{Product Name}"
+                        />
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a
+                          href="#product-detail"
+                          class="product-card_link stretched-link"
+                        >
+                          <h3 class="product-title">
+                            Beautiful Cabin in Mountains
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            Rionegro, Antioquia
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                      </div>
+                      <!-- /.card-data_body -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_grid -->
+              </div>
+              <!-- /.col-sm-6 col-lg-3 mb-4 -->
+              <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="product-card product-card_grid">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <img
+                          src="assets/img/product/key-west-in-orlando_home.jpeg"
+                          class="img-object"
+                          alt="{Product Name}"
+                        />
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a
+                          href="#product-detail"
+                          class="product-card_link stretched-link"
+                        >
+                          <h3 class="product-title">
+                            Key West House in Orlando
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            Orlando, Florida
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                      </div>
+                      <!-- /.card-data_body -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_grid -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 mb-4 -->
+              <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="product-card product-card_grid">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <img
+                          src="assets/img/product/oasis-in-st-pete_boat.jpeg"
+                          class="img-object"
+                          alt="{Product Name}"
+                        />
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a
+                          href="#product-detail"
+                          class="product-card_link stretched-link"
+                        >
+                          <h3 class="product-title">
+                            Oasis Catamaran in St. Pete
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            St. Petersburg, Florida
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                      </div>
+                      <!-- /.card-data_body -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_grid -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 mb-4 -->
+              <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="product-card product-card_grid">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <img
+                          src="assets/img/product/finca_rionegro.jpeg"
+                          class="img-object"
+                          alt="{Product Name}"
+                        />
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a
+                          href="#product-detail"
+                          class="product-card_link stretched-link"
+                        >
+                          <h3 class="product-title">
+                            Family Home on the Hills
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            Rionegro, Antioquia
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                      </div>
+                      <!-- /.card-data_body -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_grid -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 mb-4 -->
+            </div>
+            <!-- /.row -->
+            <div class="row justify-content-center mt-3">
+              <div class="col-auto">
+                <a class="btn btn-lg btn-primary px-4" href="#product-listing"
+                  >View all vacation homes</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- /.container text-center py-5 -->
+        </section>
+        <!-- /.feature-section highlight-products -->
 
+        <section class="feature-section highlights-values bg-light">
+          <div class="container text-center py-5">
+            <div class="section-header">
+              <h2>
+                Why book with
+                <span class="color-primary fw-bold">Vidalta</span>?
+              </h2>
+              <p class="header-support color-neutral">
+                <span class="color-primary fw-bold">Vidalta</span> represents a
+                higher standard of living. We believe in providing exceptional
+                service and memorable experiences. Here's some of the qualities
+                that set us appart:
+              </p>
+            </div>
+            <!-- /.section-header -->
+            <div class="row justify-content-center">
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="icon-note icon-note_xl d-block">
+                  <i class="material-symbols-outlined">diamond</i>
+                  <h3>Higher Standards</h3>
+                  <p>
+                    Elevate your vacation experience with our high-standard
+                    vision. Premium comfort and top-notch service await you.
+                  </p>
+                </div>
+                <!-- /.icon-note_xl -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 -->
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="icon-note icon-note_xl d-block">
+                  <i class="material-symbols-outlined">frame_inspect</i>
+                  <h3>Transparency</h3>
+                  <p>
+                    Trust our 100% transparency policy. Clear pricing, no hidden
+                    fees, plus detailed property photos and descriptions for
+                    your peace of mind.
+                  </p>
+                </div>
+                <!-- /.icon-note_xl -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 -->
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="icon-note icon-note_xl d-block">
+                  <i class="material-symbols-outlined">self_improvement</i>
+                  <h3>Hassle-Free</h3>
+                  <p>
+                    Experience a hassle-free stay with our vacation rentals.
+                    Simply book, arrive, and relax in your home away from home.
+                    No surprises!
+                  </p>
+                </div>
+                <!-- /.icon-note_xl -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 -->
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="icon-note icon-note_xl d-block">
+                  <i class="material-symbols-outlined">
+                    pets
+                  </i>
+                  <h3>Pet Friendly</h3>
+                  <p>
+                    Bring your furry friends along! Our pet-friendly vacation
+                    homes welcome all, ensuring a fun stay for the whole pack.
+                  </p>
+                </div>
+                <!-- /.icon-note_xl -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 -->
+            </div>
+            <!-- /.row justfiy-content-center -->
+          </div>
+          <!-- /.container text-center py-5 -->
+        </section>
+        <!-- /.feature-section highlight-values -->
 
+        <section class="feature-section highlight-slider bg-secondary">
+          <div class="container text-center py-5">
+            <p class="header-support mb-4">What our guests are saying:</p>
+            <div
+              id="reviewSlider"
+              class="carousel slide carousel-slider_text"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="h2 text-white">
+                    "We had an absolutely wonderful stay!"
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="h2 text-white">
+                    "Great location and great host"
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="h2 text-white">
+                    "Beautiful property in historic Lake Eola Heights"
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="h2 text-white">
+                    "The home was absolutely beautiful "
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="h2 text-white">"Fantastic stay"</div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mb-3 mb-sm-0">
+                <button
+                  type="button"
+                  class="carousel-control-prev position-relative"
+                  data-bs-target="#reviewSlider"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  type="button"
+                  class="carousel-control-next position-relative"
+                  data-bs-target="#reviewSlider"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <!-- /.d-flex justify-content-between -->
+            </div>
+            <!-- /.#reviewSlider -->
+            <a href="#about-us" class="btn btn-lg btn btn-primary px-4"
+              >Learn more</a
+            >
+          </div>
+          <!-- /.container text-center py-5 -->
+        </section>
+        <!-- /.feature-section highlight-slider -->
 
+        <section class="feature-section highlight-destinations">
+          <div class="container text-center py-5">
+            <div class="section-header">
+              <h2>
+                <span class="color-primary fw-bold">Vidalta</span> Travel Guide
+              </h2>
+              <p class="header-support color-neutral">
+                Explore our curated travel guide, and discover the charm in our
+                destinations.
+              </p>
+            </div>
+            <!-- /.section-header -->
+            <div class="spotlight-gallery spotlight-gallery_1x2">
+              <div class="row">
+                <div class="col-12 col-lg-6 mb-3">
+                  <div class="gallery-img cropped-img">
+                    <div class="img-wrapper h-100">
+                      <img
+                        src="assets/img/destinations/rionegro-oriente-antioqueno.webp"
+                        class="img-object"
+                        alt="{Destination Name}"
+                      />
+                    </div>
+                    <div class="img-overlay">
+                      <h3 class="text-white px-3">Rionegro, Antioquia</h3>
+                    </div>
+                  </div>
+                  <!-- /.gallery-img -->
+                </div>
+                <!-- /.col-12 col-lg-6 mb-3 -->
+                <div class="col-12 col-lg-6 h-100">
+                  <div class="row">
+                    <div class="col-12 mb-3">
+                      <div class="gallery-img cropped-img">
+                        <div class="img-wrapper h-50">
+                          <img
+                            src="assets/img/destinations/orlando-skyline-fom-lake-eola-florida-us.jpeg"
+                            class="img-object"
+                            alt="{Destination Name}"
+                          />
+                        </div>
+                        <div class="img-overlay">
+                          <h3 class="text-white px-3">Orlando, Florida</h3>
+                        </div>
+                      </div>
+                      <!-- /.gallery-img -->
+                    </div>
+                    <!-- /.col-12 mb-3 -->
+                    <div class="col-12 mb-3">
+                      <div class="gallery-img cropped-img">
+                        <div class="img-wrapper h-50">
+                          <img
+                            src="assets/img/destinations/st-petersburg.jpeg"
+                            class="img-object"
+                            alt="{Destination Name}"
+                          />
+                        </div>
+                        <div class="img-overlay">
+                          <h3 class="text-white px-3">
+                            St. Petersburg, Florida
+                          </h3>
+                        </div>
+                      </div>
+                      <!-- /.gallery-img -->
+                    </div>
+                    <!-- /.col-12 mb-3 -->
+                  </div>
+                  <!-- /.row -->
+                </div>
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.spotlight-gallery_1x2 -->
+          </div>
+          <!-- /.container text-center py-5 -->
+        </section>
+        <!-- /.feature-section highlight-destinations -->
+
+        <div class="my-5 py-5">
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
         </div>
 
-        
-        <!-- file: templates/{page-name}.html -->
+        <section class="hero-spotlight hero-spotlight_lg">
+          <div class="hero-image cropped-img">
+            <div class="img-wrapper">
+              <img
+                src="assets/img/hero/hero-img_about.png"
+                class="img-object"
+                alt="{Image description}"
+              />
+            </div>
+          </div>
+          <!-- /.hero-image -->
+          <div class="hero-overlay">
+            <div class="container-lg">
+              <div class="hero-text">
+                <h1 class="mb-3">Discover The Higher Standard</h1>
+                <p class="header-support">
+                  <span class="fw-bold">Vidalta</span> symbolizes a higher
+                  standard of living, vacationing, and simply enjoying life. We
+                  are committed to elevating your vacation experience with
+                  exceptional service and comfort.
+                </p>
+              </div>
+              <!-- /.hero-text -->
+            </div>
+            <!-- /.container-lg -->
+          </div>
+          <!-- /.hero-overlay -->
+        </section>
+        <!-- /.hero-spotlight_lg -->
+
+        <div class="container py-5">
+          <section class="feature-section media-left mb-5">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="cropped-img h-100">
+                  <div class="img-wrapper">
+                    <img
+                      src="assets/img/vidalta_story.png"
+                      class="img-fluid rounded"
+                      alt="Vidalta Story: chairs on balcony overlooking lake"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- /.col-12 col-md-6 -->
+              <div class="col-12 col-md-6">
+                <h2 class="pt-3">Our Story</h2>
+                <p>
+                  Born out of a passion for extraordinary living experiences,
+                  <span class="fw-bold color-primary">Vidalta</span> was created
+                  to elevate the standard for vacation home rentals. We believe
+                  that a vacation is not just about visiting new places, but
+                  about fully immersing yourself in the experience, and that
+                  begins with an ideal place to call ‘home’.
+                </p>
+                <p>
+                  Our journey is fueled by transparency, uncompromising quality,
+                  and a commitment to high service standards – values that are
+                  integral to our brand identity. We take great pride in
+                  crafting unforgettable vacation experiences while also
+                  positively contributing to the wellbeing and prosperity of the
+                  communities we serve.
+                </p>
+              </div>
+              <!-- /.col-12 col-md-6 -->
+            </div>
+            <!-- /.row -->
+          </section>
+          <!-- /.feature-section media-left -->
+
+          <section class="feature-section media-right mb-5">
+            <div class="row">
+              <div class="col-12 col-md-6 order-md-last">
+                <div class="cropped-img h-100">
+                  <div class="img-wrapper">
+                    <img
+                      src="assets/img/vidalta_vision.png"
+                      class="img-fluid rounded"
+                      alt="Vidalta Vision: house on a hill overlooking the ocean"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- /.col-12 col-md-6 order-md-last -->
+              <div class="col-12 col-md-6">
+                <h2 class="pt-3">Our Vision</h2>
+                <p>
+                  <span class="fw-bold color-primary">Vidalta’s</span> dream is
+                  to change the way people think about vacation home rentals. We
+                  want to provide an amazing, first-class experience that blends
+                  luxury, comfort, and a genuine feel of the local culture.
+                </p>
+                <p>
+                  Our goal is to be the #1 choice for travelers in search of
+                  hassle-free, memorable vacations. Our rentals, more than just
+                  beautiful homes, embody the spirit of local life, lending a
+                  unique touch to every trip. We’re dedicated to surpass
+                  expectations and redefine what a vacation home can be. Our
+                  commitment is to transform each vacation into an exceptional,
+                  unforgettable journey.
+                </p>
+              </div>
+              <!-- /.col-12 col-md-6 -->
+            </div>
+            <!-- /.row -->
+          </section>
+          <!-- /.feature-section media-right -->
+
+          <section class="feature-section media-left mb-5">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="cropped-img h-100">
+                  <div class="img-wrapper">
+                    <img
+                      src="assets/img/vidalta_properties.png"
+                      class="img-fluid rounded"
+                      alt="Vidalta Properties: image depicting vacation beach homes"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- /.col-12 col-md-6 -->
+              <div class="col-12 col-md-6">
+                <h2 class="pt-3">
+                  <span class="color-primary fw-bold">Vidalta</span> Properties
+                </h2>
+                <ul>
+                  <li class="mb-3">
+                    Every one of our properties undergoes an extensive quality
+                    assessment, ensuring comfort and excellence in every detail.
+                  </li>
+                  <li class="mb-3">
+                    We thoughtfully select homes with a distinctive charm,
+                    promising a unique experience for your stay.
+                  </li>
+                  <li class="mb-3">
+                    Our properties are equipped with up-to-date conveniences,
+                    offering a smooth, hassle-free experience.
+                  </li>
+                  <li class="mb-3">
+                    Prioritizing cleanliness and safety, we ensure our guests
+                    enjoy a serene, carefree stay.
+                  </li>
+                </ul>
+              </div>
+              <!-- /.col-12 col-md-6 -->
+            </div>
+            <!-- /.row -->
+          </section>
+          <!-- /.feature-section media-left -->
+        </div>
+        <!-- /.container py-5 -->
+
+        <section class="feature-section highlight-values bg-light">
+          <div class="container text-center py-5">
+            <h2>
+              The <span class="color-primary fw-bold">Vidalta</span> Difference
+            </h2>
+            <p class="header-support color-neutral">
+              Our values make us stand out in a crowded market. In an era where
+              many focus on quantity, we advocate for quality, honesty, and
+              always putting our customers first.
+            </p>
+            <div class="row justify-content-around">
+              <div class="col-12 col-lg-3">
+                <div class="icon-note icon-note_xl d-block">
+                  <i class="material-symbols-outlined">handshake</i>
+                  <h3>Customer 1st</h3>
+                  <p>
+                    We put our customers at the heart of everything we do. Our
+                    dedicated team is always ready to cater to your individual
+                    needs, making sure your vacation is just as you dreamed it
+                    would be.
+                  </p>
+                </div>
+                <!-- /.icon-note_xl -->
+              </div>
+              <!-- /.col-12 col-lg-3 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="icon-note icon-note_xl d-block">
+                  <i class="material-symbols-outlined">diamond</i>
+                  <h3>Top Quality</h3>
+                  <p>
+                    We don’t settle for ‘good enough’. Each home in our
+                    collection is chosen for its high quality, adhering to
+                    strict guidelines, and providing the perfect setting for a
+                    superior vacation experience.
+                  </p>
+                </div>
+                <!-- /.icon-note_xl -->
+              </div>
+              <!-- /.col-12 col-md-6 col-lg-3 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="icon-note icon-note_xl d-block">
+                  <i class="material-symbols-outlined">frame_inspect</i>
+                  <h3>100% Transparent</h3>
+                  <p>
+                    We believe in open and honest communication. From our
+                    property listings to our guest relations, we ensure
+                    everything we do is transparent, so you know what to expect
+                    in every detail.
+                  </p>
+                </div>
+                <!-- /.icon-note_xl -->
+              </div>
+              <!-- /.col-12 col-md-6 col-lg-3 -->
+            </div>
+            <!-- /.row justify-content-around -->
+          </div>
+          <!-- /.container text-center py-5 -->
+        </section>
+        <!-- /.feature-section highlight-values -->
+
+        <section class="feature-section bg-secondary">
+          <div class="container text-center py-5">
+            <div class="h2 text-white">
+              Ready to discover your dream vacation home?
+            </div>
+            <p class="header-support">
+              Explore
+              <a href="#product-listing" class="text-white">our collection</a>
+              or <a href="#contact-us" class="text-white">contact</a> us for
+              personalized recommendations.<br />
+              Let <span class="fw-bold">Vidalta</span> elevate your vacation
+              experience.
+            </p>
+          </div>
+          <!-- /.container text-center py-5 -->
+        </section>
+        <!-- /.feature-section bg-secondary -->
+
+        <div class="my-5 py-5">
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+        </div>
+
+        <section class="hero-spotlight hero-spotlight_sm">
+          <div class="hero-image cropped-img">
+            <div class="img-wrapper">
+              <img
+                src="assets/img/hero/pexels-chris-rodriguez-2884864.jpeg"
+                class="img-object"
+                alt="{Destination Type} in {Destination Name}"
+              />
+            </div>
+          </div>
+          <!-- /.hero-image -->
+          <div class="hero-overlay">
+            <div class="container-lg">
+              <div class="hero-text">
+                <h1 class="mb-3">Search Vidalta Properties</h1>
+              </div>
+              <!-- /.hero-text -->
+              <div class="hero-cta hero-cta_searchbar">
+                <form id="productListingSearchbar">
+                  <div class="row g-3">
+                    <div class="col-lg-3 col-md-4 col-12">
+                      <div class="select-destination dropdown">
+                        <button
+                          type="button"
+                          id="selectDestination"
+                          class="form-control dropdown-toggle"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Destination
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >St. Petersburg, Florida</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Orlando, Florida</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Medellin, Colombia</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Tulum, Mexico</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- /.select-destination -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-12">
+                      <div class="select-daterange input-group">
+                        <input
+                          type="text"
+                          id="dateRange"
+                          class="form-control"
+                          placeholder="Check-in | Check-out"
+                          autocomplete="off"
+                        />
+                        <button class="input-group-text">
+                          <i class="material-symbols-outlined">
+                            calendar_month
+                          </i>
+                        </button>
+                      </div>
+                      <!-- /.select-daterange -->
+                    </div>
+                    <div class="col-md-auto col-12">
+                      <a href="" class="btn btn-secondary w-100">Search</a>
+                    </div>
+                  </div>
+                  <!-- /.row g-3 -->
+                </form>
+                <!-- /#productListingSearchbar -->
+              </div>
+              <!-- /.hero-cta_searchbar -->
+            </div>
+            <!-- /.container-lg -->
+          </div>
+          <!-- /.hero-overlay -->
+        </section>
+        <!-- /.hero-spotlight_sm-->
+
+        <section class="product-listing_fullwidth">
+          <div class="container py-5">
+            <div class="section-header">
+              <h2>Product listing full-width</h2>
+            </div>
+            <div class="row">
+              <div class="col-auto mb-4">
+                <div class="product-card product-card_list">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <a href="#product-detail" class="product-card_link">
+                          <img
+                            src="assets/img/product/cabin-in-mountains_rionegro.jpeg"
+                            class="img-object"
+                            alt="{Product Name}"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a href="#product-detail">
+                          <h3 class="product-title">
+                            Beautiful Cabin in Mountains
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            Rionegro, Antioquia
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                        <div class="product-description">
+                          Beautiful Bungalow in the mountains of Rionegro with
+                          breathtaking views, authentic ranch character,
+                          attention to details and comfort truly offer an
+                          authentic experience. Disconnect from the city and get
+                          away. Medellin 45min, JMC International Airport &
+                          Llano Grande 20min, Guatapé/El Peñol 1 hour and much
+                          more.
+                        </div>
+                        <!-- /.product-description -->
+                        <div class="product-details">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">people_alt</i>
+                            <span>4 guests </span>
+                          </div>
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">bed</i>
+                            <span>3 beds</span>
+                          </div>
+                        </div>
+                        <!-- /.product-details -->
+                      </div>
+                      <!-- /.card-data_body -->
+                      <div class="card-data_action">
+                        <div class="product-rating">
+                          <div class="rating-stars">
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                          </div>
+                        </div>
+                        <!-- /.product-rating -->
+                        <div class="product-price">
+                          <span class="currency">$</span>47.00
+                          <span class="support-text">night</span>
+                        </div>
+                        <!-- /.product-price -->
+                        <div class="product-cta">
+                          <a
+                            href="#product-detail"
+                            class="btn btn-primary w-100 stretched-link"
+                            >Book Now</a
+                          >
+                        </div>
+                        <!-- /.product-cta -->
+                      </div>
+                      <!-- /.card-data_action -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_list -->
+              </div>
+              <!-- /.col-auto mb-4 -->
+              <div class="col-auto mb-4">
+                <div class="product-card product-card_list">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <a href="#product-detail">
+                          <img
+                            src="assets/img/product/key-west-in-orlando_home.jpeg"
+                            class="img-object"
+                            alt="{Product Name}"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a href="#product-detail" class="product-card_link">
+                          <h3 class="product-title">
+                            Key West House in Orlando
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            Orlando, Florida
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                        <div class="product-description">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Alias tenetur vitae eum! Fugiat qui corporis
+                          perferendis distinctio nobis temporibus accusantium ad
+                          delectus dicta. Est rem odio laboriosam esse ea
+                          eveniet? Molestiae alias delectus exercitationem.
+                          Culpa explicabo at, excepturi, magni assumenda eius
+                          et, doloremque laboriosam aspernatur ipsum voluptate
+                          unde quo natus dolorem nihil!
+                        </div>
+                        <!-- /.product-description -->
+                        <div class="product-details">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">people_alt</i>
+                            <span>8 guests </span>
+                          </div>
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">bed</i>
+                            <span>6 beds</span>
+                          </div>
+                        </div>
+                        <!-- /.product-details -->
+                      </div>
+                      <!-- /.card-data_body -->
+                      <div class="card-data_action">
+                        <div class="product-rating">
+                          <div class="rating-stars">
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                          </div>
+                        </div>
+                        <!-- /.product-rating -->
+                        <div class="product-price">
+                          <span class="currency">$</span>398.00
+                          <span class="support-text">night</span>
+                        </div>
+                        <!-- /.product-price -->
+                        <div class="product-cta">
+                          <a
+                            href="#product-detail"
+                            class="btn btn-primary w-100 stretched-link"
+                            >Book Now</a
+                          >
+                        </div>
+                        <!-- /.product-cta -->
+                      </div>
+                      <!-- /.card-data_action -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_list -->
+              </div>
+              <!-- /.col-auto mb-4 -->
+              <div class="col-auto mb-4">
+                <div class="product-card product-card_list">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <a href="#product-detail">
+                          <img
+                            src="assets/img/product/oasis-in-st-pete_boat.jpeg"
+                            class="img-object"
+                            alt="{Product Name}"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a href="#product-detail" class="product-card_link">
+                          <h3 class="product-title">
+                            Oasis Catamaran in St. Pete
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            St. Petersburg, Florida
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                        <div class="product-description">
+                          Oasis is a beautiful 2020 model, 40' Catamaran located
+                          in the heart of Downtown St. Pete, walking distance to
+                          seemingly endless restaurants, shops and
+                          entertainment, including St. Pete's famous Pier. Enjoy
+                          all the comforts of home while on the water. Create
+                          countless memories with family and loved ones in this
+                          spacious and modern vessel with all the amenities you
+                          will need.
+                        </div>
+                        <!-- /.product-description -->
+                        <div class="product-details">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">people_alt</i>
+                            <span>6 guests </span>
+                          </div>
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">bed</i>
+                            <span>4 beds</span>
+                          </div>
+                        </div>
+                        <!-- /.product-details -->
+                      </div>
+                      <!-- /.card-data_body -->
+                      <div class="card-data_action">
+                        <div class="product-rating">
+                          <div class="rating-stars">
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                          </div>
+                        </div>
+                        <!-- /.product-rating -->
+                        <div class="product-price">
+                          <span class="currency">$</span>653.00
+                          <span class="support-text">night</span>
+                        </div>
+                        <!-- /.product-price -->
+                        <div class="product-cta">
+                          <a
+                            href="#product-detail"
+                            class="btn btn-primary w-100 stretched-link"
+                            >Book Now</a
+                          >
+                        </div>
+                        <!-- /.product-cta -->
+                      </div>
+                      <!-- /.card-data_action -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_list -->
+              </div>
+              <!-- /.col-auto mb-4 -->
+              <div class="col-auto mb-4">
+                <div class="product-card product-card_list">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <a href="#product-detail">
+                          <img
+                            src="assets/img/product/finca_rionegro.jpeg"
+                            class="img-object"
+                            alt="{Product Name}"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a href="#product-detail" class="product-card_link">
+                          <h3 class="product-title">
+                            Family Home on the Hills
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            Rionegro, Antioquia
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                        <div class="product-description">
+                          Beautiful rest house among the Beautiful Mountains. A
+                          quiet place full of good energies to relax, recharge
+                          and work remotely! Perfect layout and comfort to share
+                          with family/friends. Approximately 35min
+                          Medellin-20min Airport-1h Guatape/Piedra del
+                          Penol-25min San Antonio de Pereira-50min El
+                          Retiro-10min horses,fishing, funda and pool.
+                        </div>
+                        <!-- /.product-description -->
+                        <div class="product-details">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">people_alt</i>
+                            <span>8 guests </span>
+                          </div>
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">bed</i>
+                            <span>3 beds</span>
+                          </div>
+                        </div>
+                        <!-- /.product-details -->
+                      </div>
+                      <!-- /.card-data_body -->
+                      <div class="card-data_action">
+                        <div class="product-rating">
+                          <div class="rating-stars">
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                            <i class="material-symbols-outlined">grade</i>
+                          </div>
+                        </div>
+                        <!-- /.product-rating -->
+                        <div class="product-price">
+                          <span class="currency">$</span>115.00
+                          <span class="support-text">night</span>
+                        </div>
+                        <!-- /.product-price -->
+                        <div class="product-cta">
+                          <a
+                            href="#product-detail"
+                            class="btn btn-primary w-100 stretched-link"
+                            >Book Now</a
+                          >
+                        </div>
+                        <!-- /.product-cta -->
+                      </div>
+                      <!-- /.card-data_action -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_list -->
+              </div>
+              <!-- /.col-auto mb-4 -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container py-5 -->
+        </section>
+        <!-- /.product-listing_fullwidth -->
+
+        <section class="product-listing_grid bg-light">
+          <div class="container py-5">
+            <div class="section-header">
+              <h2>Product listing grid</h2>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="product-card product-card_grid">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <a href="#product-detail">
+                          <img
+                            src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0e/59/85/2c.jpg"
+                            class="img-object"
+                            alt="{Product Name}"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a href="#product-detail" class="product-card_link">
+                          <h3 class="product-title">
+                            Horseback Riding and ATVs Tour
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            Rionegro, Antioquia
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                        <div class="product-description">
+                          Visit the places where a notorious figure lived and
+                          died on a Pablo Escobar tour of Medellin that goes
+                          from the colorful streets of Comuna 13 to Pablo
+                          Escobar’s grave. Visiting each place with a private
+                          guide unlocks the real stories behind Pablo Escobar’s
+                          legend; unlike most group Pablo Escobar tours, you’ll
+                          have the option to visit the ruins of ‘La Catedral,’ a
+                          luxurious prison that Escobar built—and escaped.
+                        </div>
+                        <!-- /.product-description -->
+                      </div>
+                      <!-- /.card-data_body -->
+                      <div class="card-data_action">
+                        <div class="product-price">
+                          <span class="currency">$</span>190.00
+                          <span class="support-text">person</span>
+                        </div>
+                        <!-- /.product-price -->
+                        <div class="product-cta">
+                          <a
+                            href="#product-detail"
+                            class="btn btn-primary w-100 stretched-link"
+                            >Add to Booking</a
+                          >
+                        </div>
+                        <!-- /.product-cta -->
+                      </div>
+                      <!-- /.card-data_action -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_grid -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 mb-4 -->
+              <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="product-card product-card_grid">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <a href="#product-detail">
+                          <img
+                            src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/76/db/df.jpg"
+                            class="img-object"
+                            alt="{Product Name}"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a href="#product-detail" class="product-card_link">
+                          <h3 class="product-title">
+                            Private tour to Guatapé and Helicopter ride
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            Rionegro, Antioquia
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                        <div class="product-description">
+                          Capture the most incredible views of Guatapé and the
+                          magnificent El Peńol rock formation on a day trip from
+                          Medellin with a difference. Not only will you climb
+                          over 700 steps to the top of the rock, you’ll fly over
+                          it in a helicopter and enjoy a boat ride on the
+                          lake—for unbeatable vistas of the lush green region.
+                        </div>
+                      </div>
+                      <!-- /.card-data_body -->
+                      <div class="card-data_action">
+                        <div class="product-price">
+                          <span class="currency">$</span>330.00
+                          <span class="support-text">person</span>
+                        </div>
+                        <!-- /.product-price -->
+                        <div class="product-cta">
+                          <a
+                            href="#product-detail"
+                            class="btn btn-primary w-100 stretched-link"
+                            >Add to Booking</a
+                          >
+                        </div>
+                        <!-- /.product-cta -->
+                      </div>
+                      <!-- /.card-data_action -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_grid -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 mb-4 -->
+              <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="product-card product-card_grid">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <a href="#product-detail">
+                          <img
+                            class="img-object"
+                            src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/c6/48/10.jpg"
+                            alt="{Product Name}"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a href="#product-detail" class="product-card_link">
+                          <h3 class="product-title">
+                            Paragliding over giant waterfalls private tour
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            Rionegro, Antioquia
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                        <div class="product-description">
+                          Sit back and relax as a driver-guide shuttles you from
+                          your Medellín or Ríonegro hotel to Cocorna, where
+                          you’ll accompany a professional pilot on a 25-minute
+                          paragliding flight. Experience bird’s-eye views over
+                          crashing waterfalls and vast canyons, while literally
+                          gaining a new perspective— one that most travelers
+                          won’t—on this beautiful part of Colombia. Afterwards,
+                          enjoy an optional lunch in the mountains (own expense)
+                          and marvel over more panoramic vistas.
+                        </div>
+                      </div>
+                      <!-- /.card-data_body -->
+                      <div class="card-data_action">
+                        <div class="product-price">
+                          <span class="currency">$</span>156.00
+                          <span class="support-text">person</span>
+                        </div>
+                        <!-- /.product-price -->
+                        <div class="product-cta">
+                          <a
+                            href="#product-detail"
+                            class="btn btn-primary w-100 stretched-link"
+                            >Add to Booking</a
+                          >
+                        </div>
+                        <!-- /.product-cta -->
+                      </div>
+                      <!-- /.card-data_action -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_grid -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 mb-4 -->
+              <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="product-card product-card_grid">
+                  <div class="row g-0">
+                    <div class="card-image cropped-img">
+                      <div class="img-wrapper">
+                        <a href="#product-detail">
+                          <img
+                            src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/81/82/38.jpg"
+                            class="img-object"
+                            alt="{Product Name}"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.card-image -->
+                    <div class="card-data">
+                      <div class="card-data_body">
+                        <a href="#product-detail" class="product-card_link">
+                          <h3 class="product-title">
+                            Comuna 13 Graffiti Tour and Street Food
+                          </h3>
+                        </a>
+                        <div class="product-location">
+                          <div class="icon-note icon-note_sm">
+                            <i class="material-symbols-outlined">location_on</i>
+                            Rionegro, Antioquia
+                          </div>
+                        </div>
+                        <!-- /.product-location -->
+                        <div class="product-description">
+                          Comuna 13 is currently the most visited site in all of
+                          Medellin and our company has the title of those
+                          qualified to make this tour.
+                        </div>
+                      </div>
+                      <!-- /.card-data_body -->
+                      <div class="card-data_action">
+                        <div class="product-price">
+                          <span class="currency">$</span>19.49
+                          <span class="support-text">person</span>
+                        </div>
+                        <!-- /.product-price -->
+                        <div class="product-cta">
+                          <a
+                            href="#product-detail"
+                            class="btn btn-primary w-100 stretched-link"
+                            >Add to Booking</a
+                          >
+                        </div>
+                        <!-- /.product-cta -->
+                      </div>
+                      <!-- /.card-data_action -->
+                    </div>
+                    <!-- /.card-data -->
+                  </div>
+                  <!-- /.row.g-0 -->
+                </div>
+                <!-- /.product-card_grid -->
+              </div>
+              <!-- /.col-12 col-sm-6 col-lg-3 mb-4 -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container py-5 -->
+        </section>
+        <!-- /.product-listing_grid -->
+
+        <div class="my-5 py-5">
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+        </div>
+
+        <section class="hero-spotlight hero-spotlight_gallery p-2">
+  <div class="row g-2">
+    <div class="col-md-3 d-none d-md-block">
+      <div class="row g-2 g-md-0 h-100">
+        <div class="col-md-12">
+          <div class="hero-image cropped-img">
+            <div class="img-wrapper h-50">
+              <a
+                href="javascript:void(0);"
+                data-bs-toggle="modal"
+                data-bs-target="#productImageGallery_modal"
+              >
+                <img
+                  src="assets/img/product/rionegro_cabin/6ffea2aa-6f68-4432-9a7f-05f73e196db6.webp"
+                  class="img-object"
+                  alt="{Product Name}"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- /.hero-image -->
+        </div>
+        <!-- /.col-md-12 -->
+        <div class="col-md-12">
+          <div class="hero-image cropped-img">
+            <div class="img-wrapper h-50">
+              <a
+                href="javascript:void(0);"
+                data-bs-toggle="modal"
+                data-bs-target="#productImageGallery_modal"
+              >
+                <img
+                  src="assets/img/product/rionegro_cabin/43c2e2f1-9125-4db5-94d3-7289b956ec66.webp"
+                  class="img-object"
+                  alt="{Product Name}"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- /.hero-image -->
+        </div>
+        <!-- /.col-md-12 -->
+      </div>
+      <!-- /.row g-2 g-md-0 -->
+    </div>
+    <!-- /.col-md-3 d-none d-md-block -->
+    <div class="col-12 col-md-6 mb-md-2">
+      <div class="hero-image cropped-img">
+        <div class="img-wrapper h-100">
+          <a
+            href="javascript:void(0);"
+            data-bs-toggle="modal"
+            data-bs-target="#productImageGallery_modal"
+          >
+            <img
+              src="assets/img/product/rionegro_cabin/df0e323c-0055-4513-8c7f-0a2643433ac3.webp"
+              class="img-object"
+              alt="{Product Name}"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- /.col-12 col-md-6 mb-md-2 -->
+    <div class="col-12 col-md-3">
+      <div class="row g-2 h-100">
+        <div class="col-6 col-md-12">
+          <div class="hero-image cropped-img">
+            <div class="img-wrapper h-50">
+              <a
+                href="javascript:void(0);"
+                data-bs-toggle="modal"
+                data-bs-target="#productImageGallery_modal"
+              >
+                <img
+                  src="assets/img/product/rionegro_cabin/876867ee-31c5-435e-8f82-6d67483b7a1f.webp"
+                  class="img-object"
+                  alt="{Product Name}"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- /.hero-image -->
+        </div>
+        <div class="col-6 col-md-12">
+          <div class="hero-image cropped-img">
+            <div class="img-wrapper h-50">
+              <a
+                href="javascript:void(0);"
+                data-bs-toggle="modal"
+                data-bs-target="#productImageGallery_modal"
+              >
+                <img
+                  src="assets/img/product/rionegro_cabin/595c8815-db5a-4677-8587-4ed902d5d234.webp"
+                  class="img-object"
+                  alt="{Product Name}"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- /.hero-image -->
+        </div>
+        <!-- /.col-6 col-md-12 -->
+      </div>
+      <!-- /.row g-2 -->
+    </div>
+    <!-- /.col-12 col-md-3 -->
+  </div>
+  <!-- /.row g-2 -->
+  <div class="hero-cta hero-cta_gallery">
+    <div class="container-lg">
+      <a
+        class="btn btn-sm btn-secondary_outline px-4 opacity-75"
+        href="javascript:void(0);"
+        data-bs-toggle="modal"
+        data-bs-target="#productImageGallery_modal"
+        >See all photos</a
+      >
+    </div>
+    <!-- /.container-lg -->
+  </div>
+  <!-- /.hero-cta_gallery -->
+</section>
+<!-- /.hero-spotlight_gallery -->
+
+<section class="container-lg position-relative py-2">
+  <ul class="icon-link_group nav justify-content-end">
+    <li class="icon-link mb-0">
+      <a href="">
+        <i class="material-symbols-outlined">share</i>
+        <span>Share</span>
+      </a>
+    </li>
+    <li class="icon-link mb-0">
+      <a href="">
+        <i class="material-symbols-outlined">favorite</i>
+        <span>Save</span>
+      </a>
+    </li>
+  </ul>
+  <!-- /.icon-link_group -->
+</section>
+<!-- /.container-lg position-relative -->
+
+<div class="product-detail_data container py-4">
+  <div class="app-content_layout row">
+    <div class="app-content_main col-lg-8">
+      <section class="product-header mb-5">
+        <h1 class="product-header_title">
+          Beautiful Cabin in Mountains of Rionegro
+        </h1>
+        <div class="product-header_specs">
+          <div class="d-flex flex-wrap">
+            <div class="icon-note product-location">
+              <i class="material-symbols-outlined">location_on</i>
+              Rionegro, Antioquia
+            </div>
+            <div class="icon-note product-guests">
+              <i class="material-symbols-outlined">people_alt</i>
+              <span>4 guests </span>
+            </div>
+            <div class="icon-note product-beds">
+              <i class="material-symbols-outlined">bed</i>
+              <span>3 beds</span>
+            </div>
+            <div class="icon-note product-baths">
+              <i class="material-symbols-outlined">bathtub</i>
+              <span>1 bath</span>
+            </div>
+          </div>
+        </div>
+        <!-- /.product-header_specs -->
+      </section>
+      <!-- /.product-header mb-5 -->
+      <div class="product-description mb-5">
+        <h2>Property Description</h2>
+        <section
+          class="product-description_summary position-relative pb-5 mb-4 border-bottom"
+        >
+          <div class="smart-truncate truncate-3-lines">
+            <p>
+              Beautiful Bungalow in the mountains of Rionegro with breathtaking
+              views, authentic ranch character, attention to details and comfort
+              truly offer an authentic experience. Disconnect from the city and
+              get away. Medellin 45min, JMC International Airport & Llano Grande
+              20min, Guatapé/El Peñol 1 hour and much more.
+            </p>
+            <h3>Inside the Home</h3>
+            <p>
+              Open space bamboo cabin consisting of (1) bedroom, (1) living
+              room, (1) full bathroom with hot water, fully equipped indoor
+              kitchen with all basic necessities for cooking, large patio with
+              beautiful garden overlooking mountain landscapes, and an outdoor
+              grilling area.
+            </p>
+            <p>
+              This unique home offers an authentic Colombian experience,
+              combined with Mexican themed decoration.
+            </p>
+            <h3>Surrounding Area</h3>
+            <p>
+              Beautiful garden, mountain view from the bed, hammocks among
+              nature listening to the birds. A huge super comfortable king size
+              bed and super soft pillows. Kitchen and bar q are integrated to
+              the outside, bonfire, mesh in the air over nature glamping style
+              for a unique and different experience.
+            </p>
+            <p>
+              Quiet, safe, and very nice neighborhood. Sociable neighbors and
+              very collaborative. A unique experience to enjoy with family and
+              friends!
+            </p>
+            <p>
+              A total relaxation amidst the wonders of nature! Unique and
+              different decoration with Mexican style made with a lot of love,
+              time and dedication in every detail!
+            </p>
+          </div>
+          <!-- /.smart-truncate truncate-3-lines -->
+        </section>
+        <!-- /.product-description_summary -->
+        <section class="product-description_highlights pb-4 mb-4 border-bottom">
+          <h3>Highlights</h3>
+          <div class="d-flex flex-wrap justify-content-between">
+            <div class="icon-note icon-note_lg">
+              <i class="material-symbols-outlined">wifi</i>
+              <h4 class="mb-0">High-speed WiFi</h4>
+            </div>
+            <!-- /.icon-note_lg -->
+            <div class="icon-note icon-note_lg">
+              <i class="material-symbols-outlined">forest</i>
+              <h4 class="mb-0">Surrounded by nature</h4>
+            </div>
+            <!-- /.icon-note_lg -->
+            <div class="icon-note icon-note_lg">
+              <i class="material-symbols-outlined">outdoor_grill</i>
+              <h4 class="mb-0">Outdoor grilling area</h4>
+            </div>
+            <!-- /.icon-note_lg -->
+          </div>
+        </section>
+        <!-- /.product-description_highlights -->
+        <section class="product-description_amenities pb-4 mb-4 border-bottom">
+          <h3>Amenities</h3>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">wifi</i>
+                High-speed Wifi
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">local_parking</i>
+                Free parking on premises
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">pets</i>
+                Pet friendly
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">TV</i>
+                TV
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">yard</i>
+                Private yard/garden
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">deck</i>
+                Outdoor patio
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">cooking</i>
+                Gas stove
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">soup_kitchen</i>
+                Cooking utensils
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">coffee_maker</i>
+                Coffee maker
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">table_restaurant</i>
+                Dining table
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">flatware</i>
+                Dishes &amp; silverware
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">oven_gen</i>
+                Countertop oven
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">shower</i>
+                Hot water
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">dry_cleaning</i>
+                Towels &amp; bed linen
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">outdoor_grill</i>
+                Outdoor grilling area
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">casino</i>
+                Cards &amp; board games
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="icon-note">
+                <i class="material-symbols-outlined">fireplace</i>
+                Outdoor fire pit
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /.product-description_amenities -->
+        <section class="product-description_rooms pb-4 mb-4 border-bottom">
+          <h3>Bedrooms</h3>
+          <div class="row">
+            <div class="col-6 col-md-4">
+              <div class="product-card product-card_grid">
+                <div class="row g-0">
+                  <div class="card-image cropped-img">
+                    <div class="img-wrapper">
+                      <img
+                        src="assets/img/product/rionegro_cabin/f1dfd5f5-6d7e-4646-b198-2e49465137a7.webp"
+                        class="img-object"
+                        alt="{Property Room}"
+                      />
+                    </div>
+                  </div>
+                  <!-- /.card-image -->
+                  <div class="card-data">
+                    <div class="card-data_body">
+                      <div class="card-title h5">Bedroom (open)</div>
+                      <ul class="card-text">
+                        <li>(1) King size bed</li>
+                        <li>(1) Queen size bed</li>
+                      </ul>
+                    </div>
+                    <!-- /.card-data_body -->
+                  </div>
+                  <!-- /.card-data -->
+                </div>
+                <!-- /.row g-0 -->
+              </div>
+              <!-- /.product-card_grid -->
+            </div>
+            <!-- /.col-6 col-md-4 -->
+            <div class="col-6 col-md-4">
+              <div class="product-card product-card_grid">
+                <div class="row g-0">
+                  <div class="card-image cropped-img">
+                    <div class="img-wrapper">
+                      <img
+                        src="assets/img/product/rionegro_cabin/59c1abd7-642d-42c4-a113-5aa6dfebb573.webp"
+                        class="img-object"
+                        alt="{Product Room}"
+                      />
+                    </div>
+                  </div>
+                  <!-- /.card-image -->
+                  <div class="card-data">
+                    <div class="card-data_body">
+                      <div class="card-title h5">Living room (open)</div>
+                      <ul class="card-text">
+                        <li>(1) Sofa bed</li>
+                      </ul>
+                    </div>
+                    <!-- /.card-data_body -->
+                  </div>
+                  <!-- /.card-data -->
+                </div>
+                <!-- /.row g-0 -->
+              </div>
+              <!-- /.product-card_grid -->
+            </div>
+            <!-- /.col-6 col-md-4 -->
+          </div>
+          <!-- /.row -->
+        </section>
+        <!-- /.product-description_rooms -->
+        <section class="product-description_guidelines pb-4 mb-4">
+          <h3>Rental guidelines</h3>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+              <h4>House rules</h4>
+              <ul>
+                <li>Check-in: after 3:00pm</li>
+                <li>Check out: before 12:00pm</li>
+                <li>Quiet hours: 11:00pm to 7:00am</li>
+                <li>Maximum guests: 4</li>
+                <li>Pets: allowed</li>
+                <li>NO parties or events</li>
+                <li>NO smoking</li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <h4>Recommendations</h4>
+              <ul>
+                <li>No carbon monoxide detector</li>
+                <li>No smoke alarm</li>
+                <li>Personal vehicle recommended</li>
+                <li>Contact VIP Concierge for local guidance</li>
+                <li>Do not leave children or pets unattended.</li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <h4>Payments &amp; Cancellation</h4>
+              <ul>
+                <li>50% payment required upon booking.</li>
+                <li>50% cancellation fee within 7 days of check-in date.</li>
+                <li>
+                  NO refunds on reservervations cancelled within 7 days of
+                  check-in.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- /.product-detail_guidelines -->
+      </div>
+      <!-- /.product-description -->
+    </div>
+    <!-- /.app-content_main col-lg-8 -->
+
+    <div class="app-content_sidebar col-lg-4">
+      <section class="card booking-card text-center mb-4">
+        <div class="card-header bg-light py-3">
+          <h3 class="mb-0">Reserve your stay</h3>
+        </div>
+        <div class="card-body">
+          <h4><span class="fw-light">From</span> $47/night</h4>
+          <div class="booking-card_field mb-3">
+            <div>Select dates to check availability:</div>
+            <div class="select-daterange input-group">
+              <input
+                type="text"
+                id="dateRange"
+                class="form-control"
+                placeholder="Check-in | Check-out"
+                autocomplete="off"
+              />
+              <button class="input-group-text">
+                <i class="material-symbols-outlined">
+                  calendar_month
+                </i>
+              </button>
+            </div>
+            <!-- /.select-daterange -->
+          </div>
+          <!-- /.booking-card_field -->
+          <div class="booking-card_field mb-3">
+            <div class="select-guests dropdown">
+              <button
+                type="button"
+                id="selectGuests"
+                class="form-control dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Guests
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">1 Adult</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">2 Adults</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">2 Children</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">1 pet</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.booking-card_field -->
+          <div class="booking-card_cta">
+            <a href="#" class="btn btn-lg btn-primary w-100"
+              >Check Availability</a
+            >
+          </div>
+          <!-- .booking-card_cta -->
+        </div>
+        <!-- /.card-body -->
+      </section>
+      <!-- /.booking-card -->
+      <section class="card guarantee-card text-center mb-4">
+        <div class="card-header bg-secondary py-3">
+          <h3 class="text-white mb-0">The Vidalta Guarantee</h3>
+        </div>
+        <div class="card-body">
+          <div class="icon-note icon-note_xl d-block">
+            <i class="material-symbols-outlined">verified</i>
+            <h4>Book with confidence</h4>
+            <p>
+              Each one of
+              <span class="color-primary fw-bold">Vidalta</span> properties is
+              quality checked by our expert team to ensure your trust and
+              satisfaction.
+            </p>
+          </div>
+          <!-- /.icon-note_xl -->
+        </div>
+        <!-- /.card-body -->
+      </section>
+      <!-- /.guarantee-card -->
+      <section class="card map-card text-center mb-4">
+        <div class="card-header bg-light py-3">
+          <h3 class="mb-0">Property Location</h3>
+        </div>
+        <div class="card-body">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d126928.27077759069!2d-75.47101846755231!3d6.1964444000000105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMTEnNDcuMiJOIDc1wrAyNCcwNS41Ilc!5e0!3m2!1sen!2sus!4v1693350716844!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style="border:0; width:100%;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+      <!-- /.map-card -->
+    </div>
+    <!-- /.app-content_sidebar col-lg-4 -->
+  </div>
+  <!-- /.app-content_layout row -->
+  <section class="product-detail_extras pt-5 border-top">
+    <h3>Local Travel Guide</h3>
+    <div class="row">
+      <h4>Things to do &amp; Restaurants in Rionegro</h4>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="product-card product-card_grid">
+          <div class="row g-0">
+            <div class="card-image cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/cabin-in-mountains_rionegro.jpeg"
+                  alt="{Product Name}"
+                />
+              </div>
+            </div>
+            <!-- /.card-image -->
+            <div class="card-data">
+              <div class="card-data_body">
+                <a
+                  href="#product-detail"
+                  class="product-card_link stretched-link"
+                >
+                  <h5 class="product-title">Beautiful Cabin in Mountains</h5>
+                </a>
+              </div>
+              <!-- /.card-data_body -->
+            </div>
+            <!-- /.card-data -->
+          </div>
+          <!-- /.row.g-0 -->
+        </div>
+        <!-- /.product-card_grid -->
+      </div>
+      <!-- /.col-6 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="product-card product-card_grid">
+          <div class="row g-0">
+            <div class="card-image cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/key-west-in-orlando_home.jpeg"
+                  alt="{Product Name}"
+                />
+              </div>
+            </div>
+            <!-- /.card-image -->
+            <div class="card-data">
+              <div class="card-data_body">
+                <a
+                  href="#product-detail"
+                  class="product-card_link stretched-link"
+                >
+                  <h5 class="product-title">Key West House in Orlando</h5>
+                </a>
+              </div>
+              <!-- /.card-data_body -->
+            </div>
+            <!-- /.card-data -->
+          </div>
+          <!-- /.row.g-0 -->
+        </div>
+        <!-- /.product-card_grid -->
+      </div>
+      <!-- /.col-6 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="product-card product-card_grid">
+          <div class="row g-0">
+            <div class="card-image cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/oasis-in-st-pete_boat.jpeg"
+                  alt="{Product Name}"
+                />
+              </div>
+            </div>
+            <!-- /.card-image -->
+            <div class="card-data">
+              <div class="card-data_body">
+                <a
+                  href="#product-detail"
+                  class="product-card_link stretched-link"
+                >
+                  <h5 class="product-title">Oasis Catamaran in St. Pete</h5>
+                </a>
+              </div>
+              <!-- /.card-data_body -->
+            </div>
+            <!-- /.card-data -->
+          </div>
+          <!-- /.row.g-0 -->
+        </div>
+        <!-- /.product-card_spotlight -->
+      </div>
+      <!-- /.col-6 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="product-card product-card_spotlight">
+          <div class="row g-0">
+            <div class="card-image cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/finca_rionegro.jpeg"
+                  alt="{Product Name}"
+                />
+              </div>
+            </div>
+            <!-- /.card-image -->
+            <div class="card-data">
+              <div class="card-data_body">
+                <a
+                  href="#product-detail"
+                  class="product-card_link stretched-link"
+                >
+                  <h5 class="product-title">Family Home on the Hills</h5>
+                </a>
+              </div>
+              <!-- /.card-data_body -->
+            </div>
+            <!-- /.card-data -->
+          </div>
+          <!-- /.row.g-0 -->
+        </div>
+        <!-- /.product-card_spotlight -->
+      </div>
+      <!-- /.col-6 -->
+    </div>
+  </section>
+  <!-- /.product-detail_extras -->
+</div>
+<!-- /.product-detail_data container -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="productImageGallery_modal"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="productImageGallery_modalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="productImageGallery_modalLabel">
+          Beautiful Cabin in Mountains of Rionegro
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body thumbnail-gallery">
+        <div class="row g-2">
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/0d41b4c7-205d-4838-b2f7-725186736638.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/2e87dd8b-1552-4424-b923-32a839bb906f.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/4e452982-0a38-4841-982c-728db864a007.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/4fec0d8c-b77c-44e5-aa3e-42294c65bc9a.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/5d6cdd4e-6a3e-4465-85ec-abc0ae3fcbca.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/6a75b0f4-9a2e-4426-8e1b-8384e0cf03cc.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/6c457734-73b0-4bfd-96e0-8e8c56bba424.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/6ffea2aa-6f68-4432-9a7f-05f73e196db6.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/8d9f53a1-ba5d-40f3-88f0-874a3075100f.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/9deedd44-3e1e-48c7-8eb8-3826e5980e68.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/43c2e2f1-9125-4db5-94d3-7289b956ec66.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/51b6a1e1-c352-4e59-9832-e9d82b8dc491.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/053a3440-ac0c-4542-aa9b-47ad4367e2a5.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/59c1abd7-642d-42c4-a113-5aa6dfebb573.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/61d04d56-fb7c-4ec7-a7b9-15d51d769b27.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/76e2b870-2e05-4467-81d6-15c55d3b864c.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/88e60577-0512-4bba-8668-4e3ecbcc98f1.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/93e8d07d-4356-4938-add0-16ef2bc11a76.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/150ad203-1b4b-4959-ba90-fd27d00e5638.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/345d1433-0297-4b8f-af13-6bd5bab56405.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/415d2132-da35-4246-94b5-4f2dc73477c6.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/595c8815-db5a-4677-8587-4ed902d5d234.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/707f5f91-9b5a-4b8d-bfe9-b5fbb02bbb53.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/1276e624-2948-498b-9840-fb3b192788af.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/04888fea-5ca1-4d2a-90d2-187a9231d280.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/6304e92d-459d-4cce-b76e-1f2ce03b864e.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/9052c72a-8200-42cc-a0d1-cf0c31a05ac5.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/363612f8-bd3e-4422-844f-ab4d929766c0.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/876867ee-31c5-435e-8f82-6d67483b7a1f.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/936418fc-aeb2-4624-adef-af94ab05285d.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/18367260-f918-485c-9a62-75f11b3f5f06.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/a5bcf451-019d-4e6b-8907-a0aa65766cd7.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/af19f782-5294-42f5-83a1-e7b2dd5c75af.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/b0d0d4d5-51ff-45f6-8450-1b96a21a5edf.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/bc074883-fef7-48a3-a869-d695d3723ea6.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/c0e390e4-90e1-4e91-a7cc-21c59ba5bd23.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/c37dee20-8852-4a90-9df6-05f9e108fdb0.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/cca4fd62-d36c-49ea-a6b4-0e1cfd4574e0.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/d2c89075-289c-4343-a141-02f43d672bdb.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/d8bae92e-8513-4b5a-86f6-10ae1fdd86ec.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/d0791d60-f0e1-4d7d-a8e9-534e8246d8a5.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/df0e323c-0055-4513-8c7f-0a2643433ac3.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/e21e589f-369f-471f-bf14-cc437f94db87.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/e1712c5a-f3db-456f-9047-d1d69db1653b.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/e25908c2-27ef-4ea6-b03e-5ff2bbada335.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/ec55cd16-42fd-47f0-b17b-9abc6fef0669.jpeg"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/f1dfd5f5-6d7e-4646-b198-2e49465137a7.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/f112a342-eef2-4437-bb09-40c04371549e.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+          <div class="col-6 col-sm-4 col-md-3">
+            <div class="cropped-img">
+              <div class="img-wrapper">
+                <img
+                  class="img-object"
+                  src="assets/img/product/rionegro_cabin/fba46e2b-ac0f-44b8-b352-000ce20205f1.webp"
+                  alt="{Product Name}"
+                  onclick="openLightbox(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- /.col-6.col-sm-4.col-md-3 -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary_outline"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /#productImageGallery_modal -->
+<!-- Lightbox Overlay -->
+<div class="lightbox-overlay" id="lightbox">
+  <img src="" alt="lightbox image" id="lightbox-img" />
+  <span class="close cursor" onclick="closeLightbox()">&times;</span>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
       </main>
       <!-- /.app-content -->
 
       <footer class="app-footer bg-dark">
-        <!-- file: layouts/footer/app-footer.html -->
+        <div class="footer-content container-xxl py-5">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12 mb-3">
+              <div class="footer-brand text-center">
+                <img
+                  class="img-fluid w-100"
+                  src="assets/brand/vidalta-logo_white.png"
+                  alt="{Brand Name} Logo, color"
+                />
+                <div class="color-primary mt-2">
+                  <i
+                    >Vacation homes redifined. Experience the higher standard</i
+                  >
+                </div>
+              </div>
+              <!-- /.footer-brand -->
+            </div>
+            <div class="col-12">
+              <ul
+                class="footer-links nav justify-content-between border-top border-bottom border-secondary py-2"
+              >
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#product-listing"
+                    >Properties in Florida</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#product-listing"
+                    >Properties in Colombia</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#contact-us"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-auto mt-3">
+              <div class="footer-newsletter">
+                <form id="newsletterSignup">
+                  <h5>Newsletter</h5>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your e-mail"
+                      aria-label="Recipient's email"
+                      aria-describedby="newsletterSignup"
+                    />
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      id="newsletterSignup"
+                    >
+                      Sign up
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!-- /.footer-newsletter -->
+            </div>
+            <div class="col-auto mt-3">
+              <div class="footer-social">
+                <h5>Social</h5>
+                <ul class="nav">
+                  <li class="icon-link social">
+                    <a class="facebook" href="" target="_blank"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li class="icon-link social">
+                    <a class="instagram" href="" target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="icon-link social">
+                    <a class="linkedin" href="" target="_blank"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.footer-social -->
+            </div>
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.footer-content -->
+        <div class="footer-copyright bg-black">
+          <div class="container text-center small py-4">
+            <p class="mb-0">
+              © Copyright Vidalta 2023. All Rights Reserved.
+              <span class="mx-2">|</span
+              ><a class="link-light" href="#sitemap">Sitemap</a>
+              <span class="mx-2">|</span>
+              <a class="link-light" href="#privacy-policy">Privacy</a>
+              <span class="mx-2">|</span>
+              <a class="link-light" href="#terms-and-conditions">Terms</a>
+            </p>
+          </div>
+        </div>
+        <!-- /.footer-copyright -->
       </footer>
-
     </div>
     <!-- /.web-app -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
     <script src="functions/utilities.js"></script>
-
-
-
   </body>
 </html>

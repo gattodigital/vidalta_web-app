@@ -1,151 +1,120 @@
 <?php
-/**
- * Functions and definitions for Vidalta theme
- *
- * @package WordPress
- * @subpackage Vidalta
- * @since 1.0.0
- */
 
-/**
- * Register WordPress nav menus
- */
-function register_header_menus() {
-    register_nav_menus(
-        array(
-            'header-menu' => __('Header Menu'),
-            //'other-menu' => __('Other Menu'), // Uncomment and rename if you have other menus
-        )
-    );
-}
-add_action('init', 'register_header_menus');
-
-/**
- * Include Bootstrap navwalker class
- */
-if (!file_exists(get_template_directory() . '/class-wp-bootstrap-navwalker.php')) {
-    // File does not exist... return an error.
-    return new WP_Error('class-wp-bootstrap-navwalker-missing', __('It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'vidalta'));
-} else {
-    // File exists... require it.
-    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
-}
-
-// Add class to navigation menu list items
-function add_additional_class_on_li($classes, $item, $args) {
-    if (isset($args->add_li_class)) {
-        $classes[] = $args->add_li_class;
-    }
-    return $classes;
-}
-add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
-
-// Add class to navigation menu links
-function add_additional_class_on_links($atts, $item, $args) {
-    if (isset($args->add_link_class)) {
-        $atts['class'] = $args->add_link_class;
-    }
-    return $atts;
-}
-add_filter('nav_menu_link_attributes', 'add_additional_class_on_links', 10, 3);
-
-// Add properties as custom posts in wp admin
-function create_property_post_type() {
-    $args = array(
-        'labels' => array(
-            'name' => __('Properties'),
-            'singular_name' => __('Property')
-        ),
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'properties'),
-        'show_in_rest' => true, // This enables the Gutenberg editor for this post type
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'), // These are the features the post type supports
-    );
-    register_post_type('property', $args);
-}
-add_action('init', 'create_property_post_type');
-
-// Support post thumbnails
-function theme_add_support() {
-    add_theme_support('post-thumbnails', array('property'));
-}
-add_action('after_setup_theme', 'theme_add_support');
-
-// Add highlight values to wp admin 
-add_action( 'init', 'highlight_values_post_type', 0 );
-
-function highlight_values_post_type() {
-    $args = array(
-        'label'                => __( 'Highlight Values', 'text_domain' ),
-        'description'          => __( 'Post Type Description', 'text_domain' ),
-        'supports'             => array( 'title', 'editor' ),
-        'hierarchical'         => false,
-        'public'               => true,
-        'show_ui'              => true,
-        'show_in_menu'         => true,
-        'menu_position'        => 5,
-        'show_in_admin_bar'    => true,
-        'show_in_nav_menus'    => true,
-        'can_export'           => true,
-        'has_archive'          => true,        
-        'exclude_from_search'  => false,
-        'publicly_queryable'   => true,
-        'capability_type'      => 'page',
-    );
-    register_post_type( 'highlight_values', $args );
-}
-
-// Add highlight CTA to wp admin 
-add_action( 'init', 'highlight_cta_post_type', 0 );
-
-function highlight_cta_post_type() {
-    $args = array(
-        'label'                => __( 'Highlight CTA', 'text_domain' ),
-        'description'          => __( 'Post Type Description', 'text_domain' ),
-        'supports'             => array( 'title', 'editor' ),
-        'hierarchical'         => false,
-        'public'               => true,
-        'show_ui'              => true,
-        'show_in_menu'         => true,
-        'menu_position'        => 6,
-        'show_in_admin_bar'    => true,
-        'show_in_nav_menus'    => true,
-        'can_export'           => true,
-        'has_archive'          => true,        
-        'exclude_from_search'  => false,
-        'publicly_queryable'   => true,
-        'capability_type'      => 'page',
-    );
-    register_post_type( 'highlight_cta', $args );
-}
-
-// Footer settings 
-if( function_exists('acf_add_options_page') ) {
-    
-    acf_add_options_page(array(
-        'page_title'  => 'Footer Settings',
-        'menu_title'  => 'Footer Settings',
-        'menu_slug'   => 'footer-settings',
-        'capability'  => 'edit_posts',
-        'redirect'    => false
-    ));
-    
-}
-
-function register_my_menus() {
+// Registers custom menus for the theme
+function register_my_menus()
+{
   register_nav_menus(
     array(
-      'footer-menu' => __( 'Footer Menu' )
+      'header-menu' => __('Header Menu'),
+      'footer-menu' => __('Footer Menu')
     )
   );
 }
-add_action( 'init', 'register_my_menus' );
+add_action('init', 'register_my_menus');
 
+// Add custom class to menu links
+function add_menu_link_class($atts, $item, $args)
+{
+  if ($args->theme_location == 'header-menu') {
+    $atts['class'] = 'nav-link link-light';
+  }
 
-// Remove additional <p> tags added by Wordpress:
-remove_filter( 'the_content', 'wpautop' );
+  if ($args->theme_location == 'footer-menu') {
+    $atts['class'] = 'nav-link link-light';
+  }
 
+  return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);
 
+// Add custom class to menu list items
+function add_menu_list_item_class($classes, $item, $args)
+{
+  if ($args->theme_location == 'header-menu') {
+    $classes[] = 'nav-item';
+  }
 
-// Continue adding your theme's functions below...
+  if ($args->theme_location == 'footer-menu') {
+    $classes[] = 'nav-item';
+  }
+
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'add_menu_list_item_class', 1, 3);
+
+// Hero spotlights
+function vidalta_enqueue_scripts()
+{
+  // Register and enqueue your stylesheet
+  wp_enqueue_style('vidalta-style', get_stylesheet_uri());
+
+  // If you have additional stylesheets or scripts, enqueue them here
+}
+add_action('wp_enqueue_scripts', 'vidalta_enqueue_scripts');
+
+function highlight_products_shortcode()
+{
+  ob_start();
+  get_template_part('sections/highlight-products');
+  return ob_get_clean();
+}
+add_shortcode('highlight_products', 'highlight_products_shortcode');
+
+// Add static Reviews
+function create_reviews_post_type() {
+  register_post_type('reviews',
+      array(
+          'labels'      => array(
+              'name'          => __('Reviews', 'textdomain'),
+              'singular_name' => __('Review', 'textdomain'),
+          ),
+          'public'      => true,
+          'has_archive' => true,
+          'supports'    => array('title', 'editor', 'thumbnail'),
+          'menu_icon'   => 'dashicons-star-filled',  // This is the Dashicon class for a quote icon
+      )
+  );
+}
+add_action('init', 'create_reviews_post_type');
+
+function reviews_slider_shortcode() {
+  $args = array(
+      'post_type' => 'reviews',
+      'posts_per_page' => -1
+  );
+
+  $reviews_query = new WP_Query($args);
+
+  if($reviews_query->have_posts()) {
+      ob_start();
+      echo '<div id="reviewSlider" class="carousel slide carousel-slider_text" data-bs-ride="carousel"><div class="carousel-inner">';
+
+      while($reviews_query->have_posts()) {
+          $reviews_query->the_post();
+          echo '<div class="carousel-item">';
+          echo '<div class="h2 text-white">';
+          echo get_the_content();
+          echo '</div></div>';
+      }
+
+      wp_reset_postdata();
+
+      echo '</div></div>';
+      return ob_get_clean();
+  } else {
+      return '<p>No reviews found.</p>';
+  }
+}
+add_shortcode('reviews_slider', 'reviews_slider_shortcode');
+
+function cta_button_shortcode() {
+  $cta_button_text = get_field('cta_button_text', get_option('page_on_front'));
+  $cta_button_link = get_field('cta_button_link', get_option('page_on_front'));
+
+  if( $cta_button_text && $cta_button_link ) {
+      return '<a href="' . esc_url($cta_button_link) . '" class="btn btn-lg btn btn-primary px-4">' . esc_html($cta_button_text) . '</a>';
+  } else {
+      return '';
+  }
+}
+add_shortcode('cta_button', 'cta_button_shortcode');

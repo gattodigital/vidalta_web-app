@@ -11,11 +11,11 @@
     <div class="row justify-content-center">
 
       <?php
-      // Get the ID of the home page
-      $home_page_id = get_option('page_on_front');
+      // Get the ID of the current page
+      $current_page_id = get_the_ID();
 
-      // Get the selected highlight values from the home page ACF field
-      $selected_highlight_values = get_field('highlight_values', $home_page_id);
+      // Get the selected highlight values from the current page ACF field
+      $selected_highlight_values = get_field('highlight_values', $current_page_id);
 
       // Convert selected highlight values to an array of IDs
       $selected_highlight_value_ids = array();
@@ -46,7 +46,7 @@
           $title = get_field('highlight_title');
           $description = get_field('highlight_description');
       ?>
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg">
             <div class="icon-note icon-note_xl d-block">
               <i class="material-symbols-outlined"><?php echo esc_attr($icon_class); ?></i>
               <h3><?php echo esc_html($title); ?></h3>
@@ -54,7 +54,7 @@
             </div>
             <!-- /.icon-note_xl -->
           </div>
-          <!-- /.col-12 col-sm-6 col-lg-3 -->
+          <!-- /.col-12 col-sm-6 col-lg -->
       <?php
         }
       } else {

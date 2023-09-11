@@ -2,14 +2,21 @@
 // Get field values
 $hero_image = get_field('hero_image');
 $hero_text_h1 = get_field('hero_text_h1');
-$hero_text_support = get_field('hero_text_support'); 
+$hero_text_support = get_field('hero_text_support');
 
 // Get hero image URL and alt text
 $hero_image_url = $hero_image ? $hero_image['url'] : 'assets/img/hero/pexels-photo-12902831.jpeg';
 $hero_image_alt = $hero_image ? $hero_image['alt'] : 'Default Image Description';
 ?>
 
-<section class="hero-spotlight hero-spotlight_lg">
+<section class="hero-spotlight <?php
+                                if (is_front_page() || is_page('about-us')) {
+                                  echo 'hero-spotlight_lg';
+                                } elseif (is_page('our-properties')) {
+                                  echo 'hero-spotlight_sm';
+                                }
+                                ?>">
+
   <div class="hero-image cropped-img">
     <div class="img-wrapper">
       <img src="<?php echo esc_url($hero_image_url); ?>" class="img-object" alt="<?php echo esc_attr($hero_image_alt); ?>">
@@ -19,11 +26,11 @@ $hero_image_alt = $hero_image ? $hero_image['alt'] : 'Default Image Description'
   <div class="hero-overlay">
     <div class="container-lg">
       <div class="hero-text">
-        <?php if ($hero_text_h1): ?>
+        <?php if ($hero_text_h1) : ?>
           <h1 class="mb-3"><?php echo esc_html($hero_text_h1); ?></h1>
         <?php endif; ?>
-        
-        <?php if (is_page('about-us') && $hero_text_support): ?>
+
+        <?php if (is_page('about-us')) : ?>
           <p class="header-support">
             <?php echo esc_html($hero_text_support); ?>
           </p>
@@ -31,24 +38,23 @@ $hero_image_alt = $hero_image ? $hero_image['alt'] : 'Default Image Description'
       </div>
       <!-- /.hero-text -->
 
-      <?php if (is_page('home')): ?>
+      <?php if (is_front_page()) : ?>
         <div class="hero-cta hero-cta_newsletter">
-          <form id="newsletterSignup" action="">
-            <div class="input-group">
-              <input type="text" class="form-control form-control-lg" aria-label="Recipient's email" aria-describedby="newsletterSignup" placeholder="Enter your e-mail for updates">
-              <button type="button" id="newsletterSignup" class="btn btn-lg btn-primary px-4">
-                Sign up
-              </button>
-            </div>
-            <!-- /.input-group -->
-            <?php wp_nonce_field('newsletter_signup_nonce', '_nonce'); ?>
-          </form>
+          <?php get_template_part('components/forms/newsletter'); ?>
         </div>
         <!-- /.hero-cta_newsletter -->
       <?php endif; ?>
 
-    </div>
-    <!-- /.container-lg -->
+      <?php if (is_page('our-properties')) : ?>
+        <div class="hero-cta hero-cta_searchbar">
+          <?php get_template_part('components/forms/searchbar'); ?>
+        </div>
+      <?php endif; ?>
+
+
+
+  </div>
+  <!-- /.container-lg -->
   </div>
   <!-- /.hero-overlay -->
 </section>

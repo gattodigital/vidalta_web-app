@@ -53,8 +53,8 @@ $hero_image_alt = $hero_image ? $hero_image['alt'] : 'Default Image Description'
 
 
 
-  </div>
-  <!-- /.container-lg -->
+    </div>
+    <!-- /.container-lg -->
   </div>
   <!-- /.hero-overlay -->
 </section>

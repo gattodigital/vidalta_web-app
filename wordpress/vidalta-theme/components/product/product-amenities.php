@@ -1,108 +1,38 @@
-<section class="product-description_amenities pb-4 mb-4 border-bottom">
-          <h3>Amenities</h3>
-          <div class="row">
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">wifi</i>
-                High-speed Wifi
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">local_parking</i>
-                Free parking on premises
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">pets</i>
-                Pet friendly
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">TV</i>
-                TV
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">yard</i>
-                Private yard/garden
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">deck</i>
-                Outdoor patio
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">cooking</i>
-                Gas stove
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">soup_kitchen</i>
-                Cooking utensils
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">coffee_maker</i>
-                Coffee maker
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">table_restaurant</i>
-                Dining table
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">flatware</i>
-                Dishes &amp; silverware
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">oven_gen</i>
-                Countertop oven
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">shower</i>
-                Hot water
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">dry_cleaning</i>
-                Towels &amp; bed linen
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">outdoor_grill</i>
-                Outdoor grilling area
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">casino</i>
-                Cards &amp; board games
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="icon-note">
-                <i class="material-symbols-outlined">fireplace</i>
-                Outdoor fire pit
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- /.product-description_amenities -->
+<?php
+
+if(isset($_GET['property_id'])) {
+  $post_id = intval($_GET['property_id']);
+} else {
+  $post_id = get_the_ID();
+}
+
+$property_amenities = get_field('vh_property_amenities', $post_id);
+
+if($property_amenities) {
+  echo '<section class="product-description_amenities pb-4 mb-4 border-bottom">';
+  echo '<h3>Amenities</h3>';
+  echo '<div class="row">';
+  
+  foreach($property_amenities as $amenity) {
+    $spec_icon = get_field('spec_icon', $amenity->ID);
+    $spec_text = get_field('spec_text', $amenity->ID);
+
+    if($spec_icon || $spec_text) {
+      echo '<div class="col-12 col-sm-6 col-md-4">';
+      echo '<div class="icon-note">';
+      echo $spec_icon ? '<i class="material-symbols-outlined">'.$spec_icon.'</i>' : '<i class="material-symbols-outlined">No icon found</i>';
+      echo $spec_text ? $spec_text : 'No description found';
+      echo '</div>';
+      echo '</div>';
+    } else {
+      echo 'Error fetching fields for post with ID ' . $amenity->ID;
+    }
+  }
+  
+  echo '</div>';
+  echo '</section>';
+} else {
+  echo 'No amenities found';
+}
+
+?>

@@ -1,9 +1,22 @@
-<map class="card map-card text-center mb-4">
-  <div class="card-header bg-light py-3">
-    <h3 class="mb-0">Property Location</h3>
-  </div>
-  <div class="card-body">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d126928.27077759069!2d-75.47101846755231!3d6.1964444000000105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMTEnNDcuMiJOIDc1wrAyNCcwNS41Ilc!5e0!3m2!1sen!2sus!4v1693350716844!5m2!1sen!2sus" width="600" height="450" style="border:0; width:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</map>
-<!-- /.map-card -->
+<?php
+  if(isset($_GET['property_id'])) {
+    $post_id = intval($_GET['property_id']);
+  } else {
+    $post_id = get_the_ID();
+  }
+
+  $map_embed_code = get_field('vh_map_location', $post_id);
+  if($map_embed_code):
+?>
+    <map class="card map-card text-center mb-4">
+      <div class="card-header bg-light py-3">
+        <h3 class="mb-0">Property Location</h3>
+      </div>
+      <div class="card-body">
+        <?php echo $map_embed_code; ?>
+      </div>
+    </map>
+    <!-- /.map-card -->
+<?php else: ?>
+    <p>No map available</p>
+<?php endif; ?>

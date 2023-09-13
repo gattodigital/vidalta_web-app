@@ -5,9 +5,9 @@
       <div class="carousel-inner">
 
         <?php
-        $reviews = get_field('product_reviews'); 
-        if($reviews) {
-          foreach($reviews as $post) {
+        $reviews = get_field('product_reviews');
+        if ($reviews) {
+          foreach ($reviews as $post) {
             setup_postdata($post);
         ?>
             <div class="carousel-item <?php if ($reviews[0] == $post) echo 'active'; ?>">
@@ -18,8 +18,7 @@
         <?php
           }
           wp_reset_postdata();
-        }
-        else {
+        } else {
           echo '<div class="carousel-item active"><div class="h2 text-white">No reviews available at the moment.</div></div>';
         }
         ?>
@@ -37,13 +36,12 @@
       </div>
     </div>
 
-    <?php 
+    <?php
     $cta_button_text = get_field('section_cta_text'); // replace with your ACF field name for the button text
     $cta_button_link = get_field('section_cta_link'); // replace with your ACF field name for the button link
-    if( $cta_button_text && $cta_button_link ) {
+    if ($cta_button_text && $cta_button_link) {
       echo '<a href="' . $cta_button_link . '" class="btn btn-lg btn-primary px-4">' . $cta_button_text . '</a>';
-    }
-    else {
+    } else {
       echo '<a href="#about-us" class="btn btn-lg btn-primary px-4">Learn more</a>'; // Default CTA if none set
     }
     ?>

@@ -1,58 +1,63 @@
-<section class="product-description_rooms pb-4 mb-4 border-bottom">
-          <h3>Bedrooms</h3>
-          <div class="row">
-            <div class="col-6 col-md-4">
-              <div class="product-card product-card_grid">
-                <div class="row g-0">
-                  <div class="card-image cropped-img">
-                    <div class="img-wrapper">
-                      <img src="assets/img/product/rionegro_cabin/f1dfd5f5-6d7e-4646-b198-2e49465137a7.webp" class="img-object" alt="{Property Room}">
-                    </div>
-                  </div>
-                  <!-- /.card-image -->
-                  <div class="card-data">
-                    <div class="card-data_body">
-                      <div class="card-title h5">Bedroom (open)</div>
-                      <ul class="card-text">
-                        <li>(1) King size bed</li>
-                        <li>(1) Queen size bed</li>
-                      </ul>
-                    </div>
-                    <!-- /.card-data_body -->
-                  </div>
-                  <!-- /.card-data -->
+<?php
+if(isset($_GET['property_id'])) {
+  $post_id = intval($_GET['property_id']);
+} else {
+  $post_id = get_the_ID();
+}
+
+$property_rooms = get_field('vh_property_rooms', $post_id);
+
+if($property_rooms): ?>
+  <section class="product-description_rooms pb-4 mb-4 border-bottom">
+    <h3>Bedrooms</h3>
+    <div class="row">
+      <?php foreach($property_rooms as $room): 
+        $room_img = $room['room_img'];
+        $room_type = $room['room_type'];
+
+        // Check if room_type and room_img are not empty, if either is empty, skip this iteration
+        if(empty($room_type) || empty($room_img)) {
+            continue;
+        }
+
+        $beds = [
+          'King size bed' => $room['room_kgbeds'],
+          'Queen size bed' => $room['room_qnbeds'],
+          'Double bed' => $room['room_dbbeds'],
+          'Twin bed' => $room['room_twbeds'],
+          'Sofa bed' => $room['room_sfbeds']
+        ];
+        ?>
+        <div class="col-6 col-md-4">
+          <div class="product-card product-card_grid">
+            <div class="row g-0">
+              <div class="card-image cropped-img">
+                <div class="img-wrapper">
+                  <?php if($room_img): ?>
+                    <img src="<?php echo esc_url($room_img['url']); ?>" class="img-object" alt="<?php echo esc_attr($room_type); ?>">
+                  <?php endif; ?>
                 </div>
-                <!-- /.row g-0 -->
               </div>
-              <!-- /.product-card_grid -->
-            </div>
-            <!-- /.col-6 col-md-4 -->
-            <div class="col-6 col-md-4">
-              <div class="product-card product-card_grid">
-                <div class="row g-0">
-                  <div class="card-image cropped-img">
-                    <div class="img-wrapper">
-                      <img src="assets/img/product/rionegro_cabin/59c1abd7-642d-42c4-a113-5aa6dfebb573.webp" class="img-object" alt="{Product Room}">
-                    </div>
-                  </div>
-                  <!-- /.card-image -->
-                  <div class="card-data">
-                    <div class="card-data_body">
-                      <div class="card-title h5">Living room (open)</div>
-                      <ul class="card-text">
-                        <li>(1) Sofa bed</li>
-                      </ul>
-                    </div>
-                    <!-- /.card-data_body -->
-                  </div>
-                  <!-- /.card-data -->
+              <div class="card-data">
+                <div class="card-data_body">
+                  <?php if($room_type): ?>
+                    <div class="card-title h5"><?php echo esc_html($room_type); ?></div>
+                  <?php endif; ?>
+                  <ul class="card-text">
+                    <?php foreach($beds as $bed_type => $bed_count):
+                      if($bed_count): ?>
+                        <li>(<?php echo intval($bed_count); ?>) <?php echo esc_html($bed_type); ?></li>
+                      <?php endif;
+                    endforeach; ?>
+                  </ul>
                 </div>
-                <!-- /.row g-0 -->
               </div>
-              <!-- /.product-card_grid -->
             </div>
-            <!-- /.col-6 col-md-4 -->
           </div>
-          <!-- /.row -->
-        </section>
-        <!-- /.product-description_rooms -->
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </section>
+<?php else: 
+  echo 'No rooms found';
+endif; ?>

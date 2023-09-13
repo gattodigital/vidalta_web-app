@@ -8,6 +8,7 @@ $vh_property_img_url = get_field('vh_property_img');
 $vh_property_summary = get_field('vh_property_summary');
 $vh_property_guests = get_field('vh_property_guests');
 $vh_property_beds = get_field('vh_property_beds');
+$vh_property_bathrooms = get_field('vh_property_bathrooms');
 $vh_property_price = get_field('vh_property_price');
 
 // Debug line to see what's being retrieved:
@@ -29,9 +30,9 @@ $vh_property_price = get_field('vh_property_price');
     <!-- /.card-image -->
     <div class="card-data">
       <div class="card-data_body">
-      <a href="<?php echo home_url('/property-details?property_id=') . get_the_ID(); ?>" class="product-card_link stretched-link">
-  <h3 class="product-title"><?php echo esc_html($vh_property_title); ?></h3>
-</a>
+        <a href="<?php echo home_url('/property-details?property_id=') . get_the_ID(); ?>" class="product-card_link stretched-link">
+          <h3 class="product-title"><?php echo esc_html($vh_property_title); ?></h3>
+        </a>
 
 
         <div class="product-location">
@@ -54,6 +55,10 @@ $vh_property_price = get_field('vh_property_price');
             <i class="material-symbols-outlined">bed</i>
             <span><?php echo esc_html($vh_property_beds); ?> beds</span>
           </div>
+          <div class="icon-note icon-note_sm">
+            <i class="material-symbols-outlined">bathtub</i>
+            <span><?php echo esc_html($vh_property_bathrooms); ?> baths</span>
+          </div>
         </div>
         <!-- /.product-details -->
       </div>
@@ -75,7 +80,7 @@ $vh_property_price = get_field('vh_property_price');
         </div>
         <!-- /.product-price -->
         <div class="product-cta">
-          <a href="<?php echo esc_url($vh_property_link->guid); ?>" class="btn btn-primary w-100 stretched-link">Book Now</a>
+        <a href="<?php echo home_url('/property-details?property_id=') . get_the_ID(); ?>" class="btn btn-primary w-100 product-card_link stretched-link">Book Now</a>
         </div>
         <!-- /.product-cta -->
       </div>

@@ -28,9 +28,9 @@
       // WP_Query arguments
       $args = array(
         'post_type'      => 'highlight_values',
-        'post__in'       => $selected_highlight_value_ids, 
+        'post__in'       => $selected_highlight_value_ids,
         'orderby'        => 'post__in', // Add this line to respect the order of IDs in the post__in array
-        'posts_per_page' => 4, 
+        'posts_per_page' => 4,
       );
 
       // The Query

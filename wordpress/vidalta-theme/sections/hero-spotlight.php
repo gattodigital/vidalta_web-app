@@ -12,7 +12,7 @@ $hero_image_alt = $hero_image ? $hero_image['alt'] : 'Default Image Description'
 <section class="hero-spotlight <?php
                                 if (is_front_page() || is_page('about-us')) {
                                   echo 'hero-spotlight_lg';
-                                } elseif (is_page('our-properties')) {
+                                } elseif (is_page('our-properties') || is_page('experiences')) {
                                   echo 'hero-spotlight_sm';
                                 }
                                 ?>">
@@ -45,7 +45,7 @@ $hero_image_alt = $hero_image ? $hero_image['alt'] : 'Default Image Description'
         <!-- /.hero-cta_newsletter -->
       <?php endif; ?>
 
-      <?php if (is_page('our-properties')) : ?>
+      <?php if (is_page('our-properties') || is_page('experiences')) : ?>
         <div class="hero-cta hero-cta_searchbar">
           <?php get_template_part('components/forms/searchbar'); ?>
         </div>

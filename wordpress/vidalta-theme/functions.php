@@ -1,5 +1,44 @@
 <?php
 
+// ============================================================
+// AFFILIATE LINK HELPERS
+// ============================================================
+
+/**
+ * Build an affiliate-tracked URL by appending UTM parameters.
+ * Pass $utm_source as the affiliate network name (e.g. 'viator', 'airbnb').
+ */
+function vidalta_affiliate_url($url, $utm_source = 'vidalta', $utm_medium = 'affiliate', $utm_campaign = 'travel') {
+  if (empty($url)) return '#';
+  $separator = (strpos($url, '?') !== false) ? '&' : '?';
+  return esc_url(
+    $url . $separator .
+    'utm_source=' . rawurlencode($utm_source) .
+    '&utm_medium=' . rawurlencode($utm_medium) .
+    '&utm_campaign=' . rawurlencode($utm_campaign)
+  );
+}
+
+/**
+ * Return the display label for a known affiliate provider.
+ */
+function vidalta_provider_label($provider) {
+  $labels = array(
+    'airbnb'        => 'Airbnb',
+    'vrbo'          => 'VRBO',
+    'booking'       => 'Booking.com',
+    'viator'        => 'Viator',
+    'getyourguide'  => 'GetYourGuide',
+    'tripadvisor'   => 'Tripadvisor',
+    'expedia'       => 'Expedia',
+  );
+  return isset($labels[$provider]) ? $labels[$provider] : ucfirst($provider);
+}
+
+// ============================================================
+// CUSTOM POST TYPES
+// ============================================================
+
 // Registers custom menus for the theme
 function register_my_menus()
 {
@@ -136,6 +175,7 @@ add_action('init', 'custom_rewrite_rule', 10, 0);
 function custom_query_vars($vars)
 {
   $vars[] = 'property_id';
+  $vars[] = 'experience_id';
   return $vars;
 }
 add_filter('query_vars', 'custom_query_vars', 10, 1);
@@ -147,3 +187,85 @@ function my_rewrite_flush()
   flush_rewrite_rules();
 }
 register_activation_hook(__FILE__, 'my_rewrite_flush');
+
+// ============================================================
+// EXPERIENCES POST TYPE
+// ============================================================
+
+function create_experiences_post_type()
+{
+  register_post_type(
+    'experiences',
+    array(
+      'labels'      => array(
+        'name'               => __('Experiences', 'vidalta'),
+        'singular_name'      => __('Experience', 'vidalta'),
+        'add_new_item'       => __('Add New Experience', 'vidalta'),
+        'edit_item'          => __('Edit Experience', 'vidalta'),
+        'new_item'           => __('New Experience', 'vidalta'),
+        'view_item'          => __('View Experience', 'vidalta'),
+        'search_items'       => __('Search Experiences', 'vidalta'),
+        'not_found'          => __('No experiences found', 'vidalta'),
+        'not_found_in_trash' => __('No experiences found in trash', 'vidalta'),
+      ),
+      'public'       => true,
+      'has_archive'  => true,
+      'supports'     => array('title', 'editor', 'thumbnail', 'excerpt'),
+      'menu_icon'    => 'dashicons-location-alt',
+      'rewrite'      => array('slug' => 'experiences'),
+    )
+  );
+}
+add_action('init', 'create_experiences_post_type');
+
+// ============================================================
+// DESTINATIONS TAXONOMY (shared by vacation-homes & experiences)
+// ============================================================
+
+function create_destinations_taxonomy()
+{
+  register_taxonomy(
+    'destination',
+    array('vacation-homes', 'experiences'),
+    array(
+      'labels'       => array(
+        'name'              => __('Destinations', 'vidalta'),
+        'singular_name'     => __('Destination', 'vidalta'),
+        'search_items'      => __('Search Destinations', 'vidalta'),
+        'all_items'         => __('All Destinations', 'vidalta'),
+        'edit_item'         => __('Edit Destination', 'vidalta'),
+        'update_item'       => __('Update Destination', 'vidalta'),
+        'add_new_item'      => __('Add New Destination', 'vidalta'),
+        'new_item_name'     => __('New Destination Name', 'vidalta'),
+        'menu_name'         => __('Destinations', 'vidalta'),
+      ),
+      'hierarchical' => true,
+      'show_ui'      => true,
+      'show_in_menu' => true,
+      'rewrite'      => array('slug' => 'destination'),
+    )
+  );
+}
+add_action('init', 'create_destinations_taxonomy');
+
+// ============================================================
+// EXPERIENCE REWRITE RULES
+// ============================================================
+
+function experience_rewrite_rule()
+{
+  add_rewrite_rule('^experience-details/([0-9]+)/?', 'index.php?pagename=experience-details&experience_id=$matches[1]', 'top');
+}
+add_action('init', 'experience_rewrite_rule', 10, 0);
+
+// ============================================================
+// HIGHLIGHT EXPERIENCES SHORTCODE
+// ============================================================
+
+function highlight_experiences_shortcode()
+{
+  ob_start();
+  get_template_part('sections/highlight-experiences');
+  return ob_get_clean();
+}
+add_shortcode('highlight_experiences', 'highlight_experiences_shortcode');

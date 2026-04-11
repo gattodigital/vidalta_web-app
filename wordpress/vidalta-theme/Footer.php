@@ -87,6 +87,11 @@
         <span class="mx-2">|</span>
         <a class="link-light" href="#terms-and-conditions">Terms</a>
       </p>
+      <p class="footer-affiliate-disclosure mt-2 mb-0">
+        <i class="fa-solid fa-circle-info me-1"></i>
+        Vidalta participates in affiliate programs with Airbnb, VRBO, Booking.com, Viator, and GetYourGuide.
+        We may earn a commission when you book through links on this site, at no extra cost to you.
+      </p>
     </div>
   </div>
   <!-- /.footer-copyright -->

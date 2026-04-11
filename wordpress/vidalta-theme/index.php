@@ -11,6 +11,10 @@ if (is_front_page()) {
     get_template_part('pages/product-listing');
 } elseif (is_page('property-details')) {
     get_template_part('pages/product-detail');
+} elseif (is_page('experiences')) {
+    get_template_part('pages/experiences');
+} elseif (is_page('experience-details')) {
+    get_template_part('pages/experience-detail');
 } elseif (is_page('contact')) {
     get_template_part('pages/contact');
 } else {

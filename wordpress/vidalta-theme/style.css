@@ -960,3 +960,95 @@ a.link-light:hover {
 }
 
 /* END: PRODUCT CARD */
+
+/* ============================================================
+   AFFILIATE PLATFORM ADDITIONS
+   ============================================================ */
+
+/* Product / Experience Badges */
+.product-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 10;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-experience {
+  background-color: #006b8f;
+  color: #ffffff;
+}
+
+.badge-home {
+  background-color: #a6805a;
+  color: #ffffff;
+}
+
+/* Rating Stars */
+.rating-stars .material-symbols-outlined {
+  color: #dee2e6;
+  font-size: 1.25rem;
+}
+
+.rating-stars .material-symbols-outlined.filled {
+  color: #977547;
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Affiliate Booking Card */
+.affiliate-booking-card .affiliate-providers {
+  gap: 0.5rem;
+}
+
+.affiliate-booking-card .affiliate-btn {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.affiliate-booking-card .affiliate-disclosure {
+  border-top: 1px solid #dee2e6;
+  padding-top: 0.75rem;
+  font-size: 0.8rem;
+}
+
+/* Experience Filters */
+.experience-filters .nav-link {
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.experience-filters .nav-link:hover,
+.experience-filters .nav-link.active {
+  background-color: #006b8f;
+  border-color: #006b8f;
+  color: #ffffff;
+}
+
+/* Highlight Experiences section */
+.highlight-experiences {
+  background-color: #ffffff;
+}
+
+/* Footer Affiliate Disclosure */
+.footer-affiliate-disclosure {
+  font-size: 0.8rem;
+  color: #6c757d;
+  border-top: 1px solid #616469;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* Experience card list variant inherits product-card_list styles */
+.experience-card_list .card-data_action .product-price .support-text {
+  font-size: 0.875rem;
+}

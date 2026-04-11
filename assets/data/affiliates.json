@@ -1,0 +1,58 @@
+[
+  {
+    "id": "af-001",
+    "title": "Beautiful Cabin in Mountains",
+    "location": "Rionegro, Antioquia",
+    "image": "assets/img/product/cabin-in-mountains_rionegro.jpeg",
+    "price": 47,
+    "currency": "USD",
+    "rating": 5,
+    "guests": 4,
+    "beds": 3,
+    "description": "Beautiful Bungalow in the mountains of Rionegro with breathtaking views, authentic ranch character and comfort. Disconnect from the city and get away.",
+    "affiliate_url": "#product-detail",
+    "affiliate_partner": "Airbnb"
+  },
+  {
+    "id": "af-002",
+    "title": "Key West House in Orlando",
+    "location": "Orlando, Florida",
+    "image": "assets/img/product/key-west-in-orlando_home.jpeg",
+    "price": 89,
+    "currency": "USD",
+    "rating": 5,
+    "guests": 6,
+    "beds": 3,
+    "description": "Charming Key West-style home in the heart of Orlando. Steps from Lake Eola, restaurants, and entertainment. Perfect for families and groups.",
+    "affiliate_url": "#product-detail",
+    "affiliate_partner": "Airbnb"
+  },
+  {
+    "id": "af-003",
+    "title": "Oasis Catamaran in St. Pete",
+    "location": "St. Petersburg, Florida",
+    "image": "assets/img/product/oasis-in-st-pete_boat.jpeg",
+    "price": 120,
+    "currency": "USD",
+    "rating": 5,
+    "guests": 4,
+    "beds": 2,
+    "description": "Experience the ultimate waterfront getaway aboard a luxurious catamaran in St. Petersburg. Wake up on the water and explore Tampa Bay.",
+    "affiliate_url": "#product-detail",
+    "affiliate_partner": "VRBO"
+  },
+  {
+    "id": "af-004",
+    "title": "Family Home on the Hills",
+    "location": "Rionegro, Antioquia",
+    "image": "assets/img/product/finca_rionegro.jpeg",
+    "price": 65,
+    "currency": "USD",
+    "rating": 4,
+    "guests": 8,
+    "beds": 4,
+    "description": "Spacious family finca nestled in the hills of Rionegro. Enjoy lush gardens, private pool, and sweeping valley views just 20 minutes from the airport.",
+    "affiliate_url": "#product-detail",
+    "affiliate_partner": "Airbnb"
+  }
+]

@@ -20,6 +20,11 @@ async function loadContent(targetClass, contentPath) {
 
         // Add this right after injecting the new content
         smartTruncate('.smart-truncate', 3);
+
+        // Render affiliate dynamic group when home template is loaded
+        if (element.querySelector('#affiliateDynamicGroup')) {
+          buildAffiliateDynamicGroup('affiliateDynamicGroup', 'assets/data/affiliates.json');
+        }
       });
     });
 }
